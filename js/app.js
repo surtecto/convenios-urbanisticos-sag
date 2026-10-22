@@ -7,7 +7,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "
 const fmt = (v, d = 0) => v == null ? "s/d" : Number(v).toLocaleString("es-AR", { maximumFractionDigits: d, minimumFractionDigits: d && v % 1 ? 1 : 0 });
 const fecha = s => s ? s.slice(0, 10).split("-").reverse().join("/") : "";
 
-const TIPOS = { A: "Incorporación de suelo con cesión", B: "Permuta o canje", C: "Compensación en obra o materiales", D: "Regularización dominial", E: "Excepción de uso", P: "Sin ordenanza" };
+const TIPOS = { A: "Incorporación de suelo con compensación", B: "Permuta o canje", C: "Compensación en obra o materiales", D: "Regularización dominial", E: "Excepción de uso", P: "Sin ordenanza" };
 const EST = { hom: "Homologados", tram: "Firmados o en trámite", proy: "Proyectos" };
 const ESTLBL = { homologado: "Homologado", firmado_sin_ordenanza: "Firmado sin ordenanza", en_tramite_hcd: "En trámite en el H.C.D.", proximo_a_firma: "Próximo a la firma", proyecto_no_homologado: "Proyecto o propuesta", registro_sin_ordenanza: "Suelo fiscal (registro)" };
 const LOCLBL = { exacta: "Parcela identificada", aproximada: "Ubicación aproximada", inferida: "Ubicación inferida", no_localizada: "Sin localizar" };
@@ -175,7 +175,7 @@ function select(id, volar) {
   const cif = [];
   if (r.superficie_m2 != null) cif.push([r.superficie_m2 >= 10000 ? fmt(r.superficie_m2 / 1e4, 1) + " ha" : fmt(r.superficie_m2) + " m²", "superficie"]);
   if (r.parcelas_proyecto != null) cif.push([fmt(r.parcelas_proyecto), "parcelas"]);
-  if (r.parcelas_municipio != null) cif.push([fmt(r.parcelas_municipio) + (r.cesion_pct_parcelas != null ? ` <small style="font-size:.6em;color:var(--texto-3)">${fmt(r.cesion_pct_parcelas, 1)} %</small>` : ""), "al Municipio"]);
+  if (r.parcelas_municipio != null) cif.push([fmt(r.parcelas_municipio) + (r.participacion_municipal_pct != null ? ` <small style="font-size:.6em;color:var(--texto-3)">${fmt(r.participacion_municipal_pct, 1)} %</small>` : ""), "al Municipio"]);
   else if (r.suelo_municipio_m2) cif.push([fmt(r.suelo_municipio_m2) + " m²", "suelo al Municipio"]);
   d.innerHTML = `<header><span class="sw" style="background:var(--t${k});margin-top:9px"></span><div style="min-width:0">
       <h2>${esc(r.partes)}</h2>
@@ -223,7 +223,7 @@ function cifras() {
     [R.convenios_homologados, "", `convenios homologados en ${R.ordenanzas_homologatorias} ordenanzas`],
     [fmt(R.parcelas_proyectadas), "", "parcelas proyectadas en los loteos convenidos"],
     [fmt(R.suelo_municipio_ha, 1), "ha", `de suelo al Municipio; ${fmt(R.suelo_municipio_reserva_y_parque_ha, 0)} ha son reserva y parque`],
-    [fmt(R.cesion_parcelas_tipo_A_pct, 1), "%", `de las parcelas va al Municipio en los convenios tipo A (mediana ${fmt(R.cesion_parcelas_tipo_A_mediana_pct, 1)} %)`],
+    [fmt(R.participacion_municipal_tipo_A_pct, 1), "%", `de las parcelas va al Municipio en los convenios tipo A (mediana ${fmt(R.participacion_municipal_tipo_A_mediana_pct, 1)} %)`],
     [V.registrada, `de ${aplic}`, "subdivisiones o transferencias inscriptas en ARBA"]
   ].map(([v, u, t]) => `<div class="tira"><b>${v}${u ? `<small>${u}</small>` : ""}</b><span>${t}</span></div>`).join("");
   $("#lgAnio").innerHTML = Object.entries(TIPOS).filter(([k]) => k !== "P").map(([k, v]) => `<span><span class="sw" style="background:var(--t${k})"></span>${k} · ${v}</span>`).join("");
@@ -231,9 +231,9 @@ function cifras() {
   const R2 = R.registro_dpyop;
   const hom = REC.filter(r => r.estado === "homologado"), desde20 = hom.filter(r => r.anio_homologacion >= 2020);
   $("#lectura").innerHTML = `
-    <p><b>Lo homologado no está inscripto.</b> De ${aplic} convenios con loteo, cesión o transferencia, ${V.registrada} figuran registrados en ARBA, ${V.parcial} en parte y ${V.no_registrada} no figuran. Las parcelas donadas para el Parque Urbano Natural siguen a nombre del donante y la 118DW, donde el segundo convenio García ubica los lotes municipales, sigue sin subdividir.</p>
-    <p><b>La cesión real es menor que la declarada.</b> El registro de la Dirección declara ${fmt(R2.pct_declarado, 0)} % de parcelas conveniadas sobre ${fmt(R2.parcelas_totales)}. Depurado de entradas duplicadas o sin convenio baja a ${fmt(R2.depurado.pct, 1)} %, y sin los acuerdos de precio queda en ${fmt(R2.cesion_efectiva_sin_acuerdos_de_precio_pct, 1).replace(/,0$/, "")} %.</p>
-    <p><b>El instrumento se aceleró.</b> ${desde20.length} de las ${hom.length} ordenanzas se sancionaron desde 2020. En ese período aparecen las compensaciones en obra o materiales (${desde20.filter(r => r.tipo === "C").length} de ${hom.filter(r => r.tipo === "C").length}), y la incorporación de suelo con cesión sigue siendo la mitad: ${desde20.filter(r => r.tipo === "A").length} convenios.</p>`;
+    <p><b>Lo homologado no está inscripto.</b> De ${aplic} convenios con loteo o transferencia al Municipio, ${V.registrada} figuran registrados en ARBA, ${V.parcial} en parte y ${V.no_registrada} no figuran. Las parcelas del Parque Urbano Natural, que debían pasar al Municipio como compensación, siguen a nombre del titular original y la 118DW, donde el segundo convenio García ubica los lotes municipales, sigue sin subdividir.</p>
+    <p><b>La participación real es menor que la declarada.</b> El registro de la Dirección declara ${fmt(R2.pct_declarado, 0)} % de parcelas conveniadas sobre ${fmt(R2.parcelas_totales)}. Depurado de entradas duplicadas o sin convenio baja a ${fmt(R2.depurado.pct, 1)} %, y sin los acuerdos de precio queda en ${fmt(R2.participacion_efectiva_sin_acuerdos_de_precio_pct, 1).replace(/,0$/, "")} %.</p>
+    <p><b>El instrumento se aceleró.</b> ${desde20.length} de las ${hom.length} ordenanzas se sancionaron desde 2020. En ese período aparecen las compensaciones en obra o materiales (${desde20.filter(r => r.tipo === "C").length} de ${hom.filter(r => r.tipo === "C").length}), y la incorporación de suelo con compensación en lotes sigue siendo la mitad: ${desde20.filter(r => r.tipo === "A").length} convenios.</p>`;
 }
 
 function medir(el) { return Math.max(300, Math.floor(el.clientWidth || el.parentNode.clientWidth || 600)); }
@@ -241,7 +241,7 @@ function svgEl(tag, at, txt) { const e = document.createElementNS(NS, tag); for 
 
 function graficos() {
   if (!META) return;
-  gAnio(); gCesion(); gArba();
+  gAnio(); gParticipacion(); gArba();
 }
 
 function gAnio() {
@@ -276,16 +276,16 @@ function gAnio() {
   box.append(s);
 }
 
-function gCesion() {
-  const box = $("#gCesion"); box.innerHTML = "";
+function gParticipacion() {
+  const box = $("#gParticipacion"); box.innerHTML = "";
   const R = META.resumen;
-  const rs = REC.filter(r => r.estado === "homologado" && r.tipo === "A" && r.cesion_pct_parcelas != null).sort((a, b) => b.cesion_pct_parcelas - a.cesion_pct_parcelas);
+  const rs = REC.filter(r => r.estado === "homologado" && r.tipo === "A" && r.participacion_municipal_pct != null).sort((a, b) => b.participacion_municipal_pct - a.participacion_municipal_pct);
   const W = medir(box), fh = 24, m = { t: 26, r: 58, b: 8, l: Math.min(200, W * .46) };
   const H = m.t + rs.length * fh + m.b;
   const max = 30; // eje cortado: los valores mayores se marcan con «»
   const x = v => m.l + v / max * (W - m.l - m.r);
-  const s = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Porcentaje de parcelas cedidas al Municipio por convenio" });
-  [[R.cesion_parcelas_tipo_A_pct, "conjunto " + fmt(R.cesion_parcelas_tipo_A_pct, 1) + " %", "start"], [R.cesion_parcelas_tipo_A_mediana_pct, "mediana " + fmt(R.cesion_parcelas_tipo_A_mediana_pct, 1) + " %", "end"]].forEach(([v, t, anc]) => {
+  const s = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Porcentaje de parcelas que pasan al Municipio por convenio" });
+  [[R.participacion_municipal_tipo_A_pct, "conjunto " + fmt(R.participacion_municipal_tipo_A_pct, 1) + " %", "start"], [R.participacion_municipal_tipo_A_mediana_pct, "mediana " + fmt(R.participacion_municipal_tipo_A_mediana_pct, 1) + " %", "end"]].forEach(([v, t, anc]) => {
     s.append(svgEl("line", { x1: x(v), x2: x(v), y1: m.t - 6, y2: H - m.b, stroke: css("--texto-3"), "stroke-dasharray": "3 3", "stroke-width": 1 }));
     s.append(svgEl("text", { x: x(v) + (anc === "start" ? 4 : -4), y: m.t - 10, "text-anchor": anc, "font-size": 11 }, t));
   });
@@ -295,11 +295,11 @@ function gCesion() {
     const nom = (corto.length > 24 ? corto.slice(0, 23) + "…" : corto) + " · " + r.ordenanza;
     const g = svgEl("g", { style: "cursor:pointer" });
     g.append(svgEl("text", { x: m.l - 8, y: cy + 4, "text-anchor": "end", "font-size": 12.5 }, nom));
-    const v = Math.min(r.cesion_pct_parcelas, max), corte = r.cesion_pct_parcelas > max;
+    const v = Math.min(r.participacion_municipal_pct, max), corte = r.participacion_municipal_pct > max;
     g.append(svgEl("line", { x1: x(0), x2: x(v), y1: cy, y2: cy, stroke: color("A"), "stroke-width": 2 }));
     if (corte) g.append(svgEl("text", { x: x(v) - 2, y: cy + 4.5, "text-anchor": "end", "font-size": 14, fill: color("A"), style: "fill:" + color("A") }, "»"));
     else g.append(svgEl("circle", { cx: x(v), cy, r: 4.5, fill: color("A") }));
-    g.append(svgEl("text", { x: x(v) + 8, y: cy + 4, "font-size": 12.5, class: "cifra" }, fmt(r.cesion_pct_parcelas, 1) + " %" + (corte ? " ›" : "")));
+    g.append(svgEl("text", { x: x(v) + 8, y: cy + 4, "font-size": 12.5, class: "cifra" }, fmt(r.participacion_municipal_pct, 1) + " %" + (corte ? " ›" : "")));
     g.append(svgEl("rect", { x: 0, y: cy - fh / 2, width: W, height: fh, fill: "transparent" }));
     g.addEventListener("mousemove", e => mostrarTip(e, `<b>${esc(r.partes)}</b><br>Ord. ${esc(r.ordenanza)} · ${r.parcelas_municipio} de ${r.parcelas_proyecto} parcelas`));
     g.addEventListener("mouseleave", ocultarTip);

@@ -7,7 +7,7 @@ Sitio estático con el registro, el plano y la verificación catastral de los co
 ## Secciones
 
 - **Plano.** Áreas convenidas sobre la zonificación del COU 2026, con fondos de OpenStreetMap y satélite Esri. Filtros por estado, tipo y localidad, buscador y ficha de cada convenio. Cada ficha tiene su enlace (`#c=CU-012`).
-- **Cifras.** Convenios por año y tipo, cesión de parcelas por loteo y estado catastral en ARBA.
+- **Cifras.** Convenios por año y tipo, parcelas que vuelven al Municipio en cada loteo y estado catastral en ARBA.
 - **Verificación.** Estado de la subdivisión o la transferencia pactada en el catastro ARBA de septiembre de 2026.
 - **Datos.** Descargas en JSON, GeoPackage, GeoJSON y CSV.
 - **Método.** Fuentes, criterios de localización, advertencias y marco normativo.
@@ -33,6 +33,6 @@ No usa compilación ni dependencias externas salvo los fondos de mapa. Para verl
 - Parcelario ARBA, corte del 09-09-2026.
 - Parcelario y zonificación del Código de Ordenamiento Urbano 2026.
 
-Homologado no equivale a ejecutado. Los titulares sólo se nombran cuando son parte del convenio, tal como figuran en la ordenanza publicada.
+Las parcelas que quedan en dominio municipal no son donaciones: son la compensación por el mayor valor que la decisión pública otorga al suelo (Ley 14.449, art. 46 y ss.). Homologado no equivale a ejecutado. Los titulares sólo se nombran cuando son parte del convenio, tal como figuran en la ordenanza publicada.
 
 Arq. Juan Patricio Addesso · Mat. CAPBA 020811 · revisión 22-10-2026

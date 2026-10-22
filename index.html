@@ -22,7 +22,7 @@
     <div>
       <p class="ceja">San Andrés de Giles · Plan de Ordenamiento Territorial</p>
       <h1>Convenios <em>urbanísticos</em><br>2008–2026</h1>
-      <p class="bajada">Qué suelo se negoció con privados, a cambio de qué, dónde está y qué quedó inscripto. Cada convenio cotejado con el texto de su ordenanza y con el catastro ARBA de septiembre de 2026.</p>
+      <p class="bajada">Qué parte del mayor valor que crea la norma volvió al pueblo, en qué forma, dónde está y qué quedó inscripto. Cada convenio cotejado con el texto de su ordenanza y con el catastro ARBA de septiembre de 2026.</p>
     </div>
     <div class="firma">Arq. Juan Patricio Addesso<br>Mat. CAPBA 020811<br><span id="version">revisión 22-10-2026</span></div>
   </div>
@@ -55,7 +55,7 @@
         <div class="cuenta" id="cuenta" aria-live="polite"></div>
       </div>
       <div class="lista" id="lista" role="list"></div>
-      <div class="pie">Homologado no equivale a ejecutado: el estado de cada loteo y cada cesión está en la ficha y en <a href="#verificacion">Verificación</a>.</div>
+      <div class="pie">Homologado no equivale a ejecutado: el estado de cada loteo y de cada transferencia al Municipio está en la ficha y en <a href="#verificacion">Verificación</a>.</div>
     </aside>
     <div class="mapa">
       <div id="mapa" aria-label="Plano de convenios sobre la zonificación COU 2026"></div>
@@ -76,8 +76,8 @@
       <div class="fuente">Fuente: Digesto H.C.D. San Andrés de Giles.</div>
     </figure>
     <figure class="graf">
-      <figcaption><b>Cuánto se cede en cada loteo</b><span>Parcelas al Municipio sobre parcelas del proyecto, convenios de incorporación de suelo (tipo A)</span></figcaption>
-      <div id="gCesion"></div>
+      <figcaption><b>Qué parte de cada loteo vuelve al Municipio</b><span>Parcelas que recibe el Municipio como compensación sobre parcelas del proyecto, convenios de incorporación de suelo (tipo A)</span></figcaption>
+      <div id="gParticipacion"></div>
       <div class="fuente">Fuente: texto sancionado de cada ordenanza. Sólo convenios que informan ambas cifras.</div>
     </figure>
     <figure class="graf">
@@ -98,8 +98,8 @@
 <section id="datos" class="sec">
   <header><span class="n">III</span><h2>Datos</h2><p>Todo lo que alimenta esta página, para abrir en QGIS, una planilla o un programa propio.</p></header>
   <div class="descargas">
-    <a class="dl" href="descargas/convenios_urbanisticos_sag.json" download><span class="fmt">JSON · 79 KB</span><b>Base de convenios</b><p>35 convenios homologados y 23 firmados, en trámite o proyectados, con fechas, cifras, contraprestaciones, registro de la Dirección y estado ARBA. Incluye resumen y marco normativo.</p><span class="ir">Descargar ↓</span></a>
-    <a class="dl" href="descargas/SIG_Convenios_SAG.gpkg" download><span class="fmt">GeoPackage · 224 KB</span><b>SIG de convenios</b><p>Capas <span class="mono">convenios</span> (44 áreas), <span class="mono">zona_cou_sujeta_convenio</span> y la tabla <span class="mono">convenios_sin_localizar</span>. EPSG:4326.</p><span class="ir">Descargar ↓</span></a>
+    <a class="dl" href="descargas/convenios_urbanisticos_sag.json" download><span class="fmt">JSON · 80 KB</span><b>Base de convenios</b><p>35 convenios homologados y 23 firmados, en trámite o proyectados, con fechas, cifras, contraprestaciones, registro de la Dirección y estado ARBA. Incluye resumen y marco normativo.</p><span class="ir">Descargar ↓</span></a>
+    <a class="dl" href="descargas/SIG_Convenios_SAG.gpkg" download><span class="fmt">GeoPackage · 228 KB</span><b>SIG de convenios</b><p>Capas <span class="mono">convenios</span> (44 áreas), <span class="mono">zona_cou_sujeta_convenio</span> y la tabla <span class="mono">convenios_sin_localizar</span>. EPSG:4326.</p><span class="ir">Descargar ↓</span></a>
     <a class="dl" href="descargas/convenios_sag.geojson" download><span class="fmt">GeoJSON · 158 KB</span><b>Áreas convenidas</b><p>Los 44 polígonos localizados con todos sus atributos, sin simplificar. Para web y para QGIS.</p><span class="ir">Descargar ↓</span></a>
     <a class="dl" href="descargas/convenios_sag.csv" download><span class="fmt">CSV · 60 KB</span><b>Tabla plana</b><p>Los 57 registros en una sola tabla, con coordenadas del punto representativo cuando hay plano. UTF-8.</p><span class="ir">Descargar ↓</span></a>
   </div>
@@ -109,8 +109,9 @@
   <header><span class="n">IV</span><h2>Método</h2><p>Cómo se armó la base, qué se verificó y qué no.</p></header>
   <div class="dos">
     <div class="prosa">
-      <p><b>Universo.</b> Se leyeron las ordenanzas del Digesto del H.C.D. sancionadas desde 2008 y se separaron las que homologan o autorizan convenios con privados sobre suelo: incorporación de suelo con cesión, permutas, compensaciones en obra, regularizaciones dominiales y excepciones de uso. Se sumaron los convenios firmados, en trámite o proyectados que figuran en el registro «Gestión de suelo 2009-2026» de la Dirección de Planeamiento y Obras Particulares y en los archivos municipales.</p>
-      <p><b>Cifras.</b> Superficies, parcelas, cesiones y cuadras se tomaron del texto sancionado y se cotejaron una por una con el registro de la Dirección. Donde no coinciden, manda la ordenanza y la diferencia queda anotada en el seguimiento.</p>
+      <p><b>Universo.</b> Se leyeron las ordenanzas del Digesto del H.C.D. sancionadas desde 2008 y se separaron las que homologan o autorizan convenios con privados sobre suelo: incorporación de suelo con compensación en lotes o tierra, permutas, compensaciones en obra, regularizaciones dominiales y excepciones de uso. Se sumaron los convenios firmados, en trámite o proyectados que figuran en el registro «Gestión de suelo 2009-2026» de la Dirección de Planeamiento y Obras Particulares y en los archivos municipales.</p>
+      <p><b>Cifras.</b> Superficies, parcelas, parcelas al Municipio y cuadras se tomaron del texto sancionado y se cotejaron una por una con el registro de la Dirección. Donde no coinciden, manda la ordenanza y la diferencia queda anotada en el seguimiento.</p>
+      <p><b>Compensación, no donación.</b> Las parcelas, el suelo y las obras que quedan en dominio municipal no son donaciones de los propietarios. Son la contraprestación por el mayor valor que el Municipio, es decir el pueblo entero, otorga a ese suelo al cambiar su zona, sus indicadores o su uso: renta diferencial que vuelve a la comunidad que la produjo (Ley 14.449, art. 46 y siguientes). Que una ordenanza diga «donación» o «cesión gratuita» describe la forma jurídica con que se escritura la transferencia, no su naturaleza. La palabra cesión queda para las cesiones obligatorias del Decreto-Ley 8912/77, que son una carga de todo loteo, haya o no convenio.</p>
       <p><b>Plano.</b> Cada nomenclatura se buscó en el parcelario ARBA de septiembre de 2026 y, como respaldo, en el parcelario del Visor COU. Cuando la parcela de origen ya fue subdividida se dibujan las parcelas resultantes.</p>
       <dl class="defs">
         <dt><span class="estado" style="--c:var(--ok)">Exacta</span></dt><dd>La parcela citada en la ordenanza existe y se dibuja tal cual.</dd>
