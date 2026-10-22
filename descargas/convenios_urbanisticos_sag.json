@@ -5,6 +5,7 @@
   "descripcion": "Base de convenios urbanísticos homologados por el H.C.D. y de convenios firmados, en trámite o proyectados, conciliada con el registro «Gestión de suelo 2009-2026» de la Dirección de Planeamiento y Obras Particulares.",
   "advertencias": [
     "Las parcelas, el suelo y las obras que recibe el Municipio no son donaciones de los propietarios: son la compensación por el mayor valor que la decisión pública otorga al suelo (participación municipal en la renta diferencial, Ley 14.449 art. 46 y ss.). Que la ordenanza diga «donación» o «cesión» describe la forma jurídica de la transferencia, no su naturaleza.",
+    "Fuera del casco urbano, el dibujo de ARBA 09-2026 está trasladado entre 20 y 70 m respecto del parcelario del Visor COU y de la imagen satelital. Cada parcela de ARBA se trasladó según el corrimiento medido en sus vecinas; su forma y su superficie no cambian.",
     "Homologado no equivale a ejecutado. El estado catastral (subdivisión y titular) se verificó en ARBA 09-2026; las escrituras y obras no.",
     "Superficies y parcelas se toman de los considerandos; null = sin dato.",
     "suelo_municipio_m2 excluye las cesiones obligatorias del DL 8912/77; marcado como estimado cuando el texto da lotes y no metros.",
