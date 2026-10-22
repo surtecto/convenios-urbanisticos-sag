@@ -6,7 +6,7 @@ Sitio estático con el registro, el plano y la verificación catastral de los co
 
 ## Secciones
 
-- **Plano.** Áreas convenidas sobre la zonificación del COU 2026, con fondos de OpenStreetMap y satélite Esri. Filtros por estado, tipo y localidad, buscador y ficha de cada convenio. Cada ficha tiene su enlace (`#c=CU-012`).
+- **Plano.** Áreas convenidas sobre la zonificación del COU 2026, sobre imagen satelital (Esri), con fondo de calles opcional. Cada capa se prende, se apaga y regula su opacidad. Filtros por estado, tipo y localidad, buscador y ficha de cada convenio. Cada ficha tiene su enlace (`#c=CU-012`).
 - **Cifras.** Convenios por año y tipo, parcelas que vuelven al Municipio en cada loteo y estado catastral en ARBA.
 - **Verificación.** Estado de la subdivisión o la transferencia pactada en el catastro ARBA de septiembre de 2026.
 - **Datos.** Descargas en JSON, GeoPackage, GeoJSON y CSV.

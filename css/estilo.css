@@ -144,6 +144,20 @@ dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .leaflet-tooltip.rot:before{display:none}
 .leaflet-bar a,.leaflet-control-layers{background:var(--papel);color:var(--texto);border-color:var(--linea)}
 .leaflet-control-layers{font-size:.85rem}
+.capas{background:color-mix(in srgb,var(--papel) 95%,transparent);color:var(--texto);border:1px solid var(--linea)!important;border-radius:4px;box-shadow:var(--sombra);font-size:.82rem;max-width:252px}
+.capas summary{cursor:pointer;padding:7px 11px;font:400 .98rem var(--f-titulo-sc);letter-spacing:.03em;list-style:none}
+.capas summary::before{content:"▸ ";font-size:.75em;color:var(--texto-3)}
+.capas details[open] summary::before{content:"▾ "}
+.capas fieldset{border:0;margin:0;padding:0 11px 9px;min-width:0}
+.capas .tit{font:600 .66rem var(--f-texto);letter-spacing:.08em;text-transform:uppercase;color:var(--texto-3);border-top:1px solid var(--linea);padding:7px 11px 4px}
+.capas .fondos{display:flex;flex-wrap:wrap;gap:2px 12px}
+.capas .fondos label{white-space:nowrap;cursor:pointer}
+.capas .capa{display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 6px;padding:3px 0}
+.capas .capa label{grid-column:1/-1;cursor:pointer;line-height:1.25}
+.capas input[type=range]{width:100%;accent-color:var(--acento);margin:2px 0 0}
+.capas output{font:500 .74rem var(--f-cifra);color:var(--texto-3);min-width:34px;text-align:right}
+.capas input[type=checkbox],.capas input[type=radio]{accent-color:var(--acento);vertical-align:-2px;margin:0 4px 0 0}
+.sobre-sat .leaflet-tooltip.rot{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000,0 0 7px #000}
 .leaflet-control-attribution{background:color-mix(in srgb,var(--papel) 85%,transparent)!important;color:var(--texto-3)!important;font-size:10px}
 .leaflet-control-attribution a{color:var(--enlace)}
 

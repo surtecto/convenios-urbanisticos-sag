@@ -49,61 +49,116 @@ map.createPane("zonas").style.zIndex = 300;
 map.createPane("parc").style.zIndex = 350;
 map.createPane("conv").style.zIndex = 420;
 
-const fondos = {
-  "Zonificación COU 2026": L.layerGroup(),
-  "Calles · OpenStreetMap": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap" }),
-  "Satélite · Esri": L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { maxZoom: 19, attribution: "Esri, Maxar, Earthstar Geographics" })
+/* Fondo satelital por defecto; cada capa se prende, se apaga y regula su opacidad. */
+const FONDOS = {
+  sat: { nombre: "Satélite", capa: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { maxZoom: 19, maxNativeZoom: 18, attribution: "Imagen © Esri, Maxar, Earthstar Geographics" }) },
+  osm: { nombre: "Calles", capa: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap" }) },
+  no:  { nombre: "Sin fondo", capa: L.layerGroup() }
 };
-let fondo = "Zonificación COU 2026";
-fondos[fondo].addTo(map);
+let fondo = "sat";
+FONDOS[fondo].capa.addTo(map);
+const CAPAS = {
+  conv:  { nombre: "Convenios", on: true, op: 55 },
+  zconv: { nombre: "Zonas COU sujetas a convenio", on: true, op: 100 },
+  zonas: { nombre: "Zonificación COU 2026", on: true, op: 30 },
+  parc:  { nombre: "Parcelario (desde zoom 15)", on: true, op: 70 },
+  rot:   { nombre: "Localidades", on: true, op: 100 }
+};
+const op = k => CAPAS[k].op / 100;
+const sat = () => fondo === "sat";
 
 function zonaStyle(f) {
   const t = f.properties.f;
   const fill = t === "urb" ? css("--zurb") : (t === "rural" ? css("--zrur") : css("--zcomp"));
-  const sobreFondo = fondo !== "Zonificación COU 2026";
-  return { pane: "zonas", renderer, color: css("--zlinea"), weight: sobreFondo ? 0 : .6, fillColor: fill, fillOpacity: sobreFondo ? 0 : .8 };
+  return { pane: "zonas", renderer, color: sat() ? "#ffffff" : css("--zlinea"), weight: .6, opacity: Math.min(1, op("zonas") * 1.6), fillColor: fill, fillOpacity: op("zonas") };
 }
 function convStyle(f) {
   const p = f.properties, k = tipoKey(p), on = sel === p.id;
   const dashed = p.localizacion !== "exacta" || p.estado !== "homologado";
-  const sat = fondo === "Satélite · Esri";
-  return { pane: "conv", renderer, color: on ? css("--sel") : (sat ? "#fff" : color(k)), weight: on ? 3.4 : (sat ? 1.6 : 1.8), dashArray: dashed ? "5 4" : null,
-    fillColor: color(k), fillOpacity: on ? .6 : (p.estado === "homologado" ? .42 : .2) };
+  const o = op("conv");
+  return { pane: "conv", renderer, color: on ? css("--sel") : color(k), weight: on ? 3.4 : 2, opacity: on ? 1 : Math.min(1, o + .35), dashArray: dashed ? "5 4" : null,
+    fillColor: color(k), fillOpacity: on ? Math.max(o, .6) : (p.estado === "homologado" ? o : o * .5) };
 }
+const zconvStyle = () => ({ pane: "parc", renderer, color: sat() ? "#FFD27A" : css("--zconv"), weight: 1.4, dashArray: "2 3", opacity: op("zconv"), fillOpacity: 0 });
+const parcStyle = () => ({ pane: "parc", renderer, color: sat() ? "#ffffff" : css("--parc"), weight: .5, opacity: op("parc"), fill: false });
 
 let zonasL, parcL, convL, convZL;
+const rotL = L.layerGroup();
 Promise.all(["data/zonas.geojson", "data/convenios.geojson", "data/registros.json", "data/zonas_convenio.geojson", "data/meta.json"].map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); })))
   .then(([zon, conv, regs, zc, meta]) => {
     REC = regs; META = meta;
     zonasL = L.geoJSON(zon, { style: zonaStyle, interactive: false }).addTo(map);
-    convZL = L.geoJSON(zc, { style: () => ({ pane: "parc", renderer, color: css("--zconv"), weight: 1.2, dashArray: "2 3", fillOpacity: 0 }), interactive: false }).addTo(map);
+    convZL = L.geoJSON(zc, { style: zconvStyle, interactive: false }).addTo(map);
     convL = L.geoJSON(conv, { style: convStyle, onEachFeature: (f, l) => {
       layerById[f.properties.id] = l;
       l.on("click", () => select(f.properties.id, false));
       l.bindTooltip(esc(f.properties.partes) + (f.properties.ordenanza ? ` · Ord. ${esc(f.properties.ordenanza)}` : ""), { sticky: true, direction: "top", opacity: .95 });
     } }).addTo(map);
     map.fitBounds(convL.getBounds(), { padding: [20, 20] });
-    L.control.layers(fondos, null, { position: "topleft", collapsed: true }).addTo(map);
-    rotulos(); filtros(); render(); kpis(); cifras(); verificacion(); metodo();
+    rotulos(); panelCapas(); filtros(); render(); kpis(); cifras(); verificacion(); metodo();
     leerHash();
   })
   .catch(err => { $("#lista").innerHTML = `<p style="padding:16px">No se pudieron cargar los datos (${esc(err.message)}). Si abrió el archivo directamente, sírvalo desde un servidor web.</p>`; });
 
-map.on("baselayerchange", e => { fondo = e.name; zonasL && zonasL.setStyle(zonaStyle); convL && convL.setStyle(convStyle); });
-map.on("zoomend", () => {
-  if (map.getZoom() >= 15 && !parcL) {
+function parcVisible() { return CAPAS.parc.on && map.getZoom() >= 15; }
+function actualizarParcelario() {
+  if (parcVisible() && !parcL) {
     parcL = "cargando";
-    fetch("data/parcelas.geojson").then(r => r.json()).then(g => {
-      parcL = L.geoJSON(g, { style: () => ({ pane: "parc", renderer, color: css("--parc"), weight: .45, fill: false }), interactive: false });
-      if (map.getZoom() >= 15) parcL.addTo(map);
-    });
+    fetch("data/parcelas.geojson").then(r => r.json()).then(g => { parcL = L.geoJSON(g, { style: parcStyle, interactive: false }); actualizarParcelario(); });
+    return;
   }
-  if (parcL && parcL !== "cargando") { if (map.getZoom() >= 15) parcL.addTo(map); else map.removeLayer(parcL); }
-});
+  if (parcL && parcL !== "cargando") { if (parcVisible()) parcL.addTo(map); else map.removeLayer(parcL); }
+}
+map.on("zoomend", actualizarParcelario);
 
 function rotulos() {
   [["San Andrés de Giles", -34.4455, -59.4464], ["Cucullú", -34.4449, -59.3643], ["Villa Espil", -34.5064, -59.3412], ["Azcuénaga", -34.3657, -59.3739], ["Villa Ruiz", -34.4346, -59.2594], ["San Alberto", -34.4638, -59.5669], ["Solís", -34.2965, -59.3275]]
-    .forEach(([n, la, lo]) => L.tooltip({ permanent: true, direction: "center", className: "rot", interactive: false }).setLatLng([la, lo]).setContent(n).addTo(map));
+    .forEach(([n, la, lo]) => rotL.addLayer(L.tooltip({ permanent: true, direction: "center", className: "rot", interactive: false }).setLatLng([la, lo]).setContent(n)));
+  rotL.addTo(map);
+}
+
+function aplicarCapa(k) {
+  const c = CAPAS[k];
+  const capa = { conv: convL, zconv: convZL, zonas: zonasL, rot: rotL }[k];
+  if (k === "parc") { actualizarParcelario(); if (parcL && parcL !== "cargando") parcL.setStyle(parcStyle); return; }
+  if (!capa) return;
+  if (c.on) { if (!map.hasLayer(capa)) capa.addTo(map); } else map.removeLayer(capa);
+  if (k === "conv") convL.setStyle(convStyle);
+  if (k === "zconv") convZL.setStyle(zconvStyle);
+  if (k === "zonas") zonasL.setStyle(zonaStyle);
+  if (k === "rot") rotL.eachLayer(t => t.setOpacity(op("rot")));
+}
+function cambiarFondo(k) {
+  map.removeLayer(FONDOS[fondo].capa); fondo = k; FONDOS[k].capa.addTo(map); FONDOS[k].capa.bringToBack && FONDOS[k].capa.bringToBack();
+  map.getContainer().classList.toggle("sobre-sat", k === "sat");
+  Object.keys(CAPAS).forEach(aplicarCapa);
+}
+
+function panelCapas() {
+  const ctl = L.control({ position: "topleft" });
+  ctl.onAdd = () => {
+    const d = L.DomUtil.create("div", "capas leaflet-bar");
+    d.innerHTML = `<details${innerWidth >= 860 ? " open" : ""}><summary>Capas</summary>
+      <div class="tit">Fondo</div><fieldset class="fondos" aria-label="Fondo">${Object.entries(FONDOS).map(([k, f]) => `<label><input type="radio" name="fondo" value="${k}"${k === fondo ? " checked" : ""}> ${f.nombre}</label>`).join("")}</fieldset>
+      <div class="tit">Capas y opacidad</div><fieldset aria-label="Capas y opacidad">${Object.entries(CAPAS).map(([k, c]) => `<div class="capa">
+        <label><input type="checkbox" data-c="${k}"${c.on ? " checked" : ""}> ${c.nombre}</label>
+        <input type="range" min="0" max="100" step="5" value="${c.op}" data-c="${k}" aria-label="Opacidad: ${c.nombre}"><output>${c.op} %</output></div>`).join("")}</fieldset></details>`;
+    L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.addEventListener("change", e => {
+      const t = e.target;
+      if (t.name === "fondo") cambiarFondo(t.value);
+      else if (t.type === "checkbox") { CAPAS[t.dataset.c].on = t.checked; aplicarCapa(t.dataset.c); }
+    });
+    d.addEventListener("input", e => {
+      const t = e.target; if (t.type !== "range") return;
+      CAPAS[t.dataset.c].op = +t.value; t.nextElementSibling.textContent = t.value + " %";
+      aplicarCapa(t.dataset.c);
+    });
+    return d;
+  };
+  ctl.addTo(map);
+  map.getContainer().classList.toggle("sobre-sat", fondo === "sat");
+  Object.keys(CAPAS).forEach(aplicarCapa);
 }
 
 function kpis() {
@@ -369,9 +424,7 @@ function metodo() {
 
 /* ---------------- repintado y navegación ---------------- */
 function repintar() {
-  zonasL && zonasL.setStyle(zonaStyle); convL && convL.setStyle(convStyle);
-  convZL && convZL.setStyle(() => ({ pane: "parc", renderer, color: css("--zconv"), weight: 1.2, dashArray: "2 3", fillOpacity: 0 }));
-  parcL && parcL !== "cargando" && parcL.setStyle(() => ({ pane: "parc", renderer, color: css("--parc"), weight: .45, fill: false }));
+  Object.keys(CAPAS).forEach(aplicarCapa);
   graficos();
 }
 let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(graficos, 150); });
