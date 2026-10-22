@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Convenios urbanísticos · San Andrés de Giles</title>
+<meta name="description" content="Registro, plano y verificación catastral de los convenios urbanísticos de San Andrés de Giles, 2008-2026: ordenanzas del H.C.D., registro de la Dirección de Planeamiento y catastro ARBA.">
+<meta name="author" content="Arq. Juan Patricio Addesso">
+<meta property="og:title" content="Convenios urbanísticos · San Andrés de Giles 2008-2026">
+<meta property="og:description" content="35 convenios homologados, 23 firmados, en trámite o proyectados. Plano, cifras y estado catastral.">
+<link rel="preload" href="fonts/im-fell-english-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-semi-condensed-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="lib/leaflet.css">
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231C1A14'/%3E%3Crect x='6' y='6' width='9' height='9' fill='%23C8973A'/%3E%3Crect x='17' y='6' width='9' height='9' fill='%237BAF5E'/%3E%3Crect x='6' y='17' width='9' height='9' fill='%237BAF5E'/%3E%3Crect x='17' y='17' width='9' height='9' fill='%23F4F0E6'/%3E%3C/svg%3E">
+<script>try{const t=localStorage.getItem("cu-sag-tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+
+<header class="cab">
+  <div class="in">
+    <div>
+      <p class="ceja">San Andrés de Giles · Plan de Ordenamiento Territorial</p>
+      <h1>Convenios <em>urbanísticos</em><br>2008–2026</h1>
+      <p class="bajada">Qué suelo se negoció con privados, a cambio de qué, dónde está y qué quedó inscripto. Cada convenio cotejado con el texto de su ordenanza y con el catastro ARBA de septiembre de 2026.</p>
+    </div>
+    <div class="firma">Arq. Juan Patricio Addesso<br>Mat. CAPBA 020811<br><span id="version">revisión 22-10-2026</span></div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="in">
+    <a href="#plano">Plano</a>
+    <a href="#cifras">Cifras</a>
+    <a href="#verificacion">Verificación</a>
+    <a href="#datos">Datos</a>
+    <a href="#metodo">Método</a>
+    <span class="sp"></span>
+    <button class="tema" id="tema" type="button" aria-label="Cambiar tema claro u oscuro">◐ Tema</button>
+  </div>
+</nav>
+
+<main>
+<section id="plano" class="sec plano" aria-label="Plano de convenios">
+  <div class="app">
+    <aside class="panel">
+      <div class="filtros">
+        <div class="kpis" id="kpis"></div>
+        <div class="fila" id="fEstado" role="group" aria-label="Filtrar por estado"></div>
+        <div class="fila" id="fTipo" role="group" aria-label="Filtrar por tipo"></div>
+        <div class="ctl">
+          <select id="fLoc" aria-label="Localidad"></select>
+          <input type="search" id="fQ" placeholder="Buscar nombre, ordenanza, parcela" aria-label="Buscar">
+        </div>
+        <div class="cuenta" id="cuenta" aria-live="polite"></div>
+      </div>
+      <div class="lista" id="lista" role="list"></div>
+      <div class="pie">Homologado no equivale a ejecutado: el estado de cada loteo y cada cesión está en la ficha y en <a href="#verificacion">Verificación</a>.</div>
+    </aside>
+    <div class="mapa">
+      <div id="mapa" aria-label="Plano de convenios sobre la zonificación COU 2026"></div>
+      <details class="leyenda" id="leyenda" open></details>
+      <div class="ficha" id="ficha" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section id="cifras" class="sec">
+  <header><span class="n">I</span><h2>Cifras</h2><p>Agregados de los convenios homologados por ordenanza. Las superficies y las parcelas salen de los considerandos de cada norma.</p></header>
+  <div class="tiras" id="tiras"></div>
+  <div class="graficos">
+    <figure class="graf ancho">
+      <figcaption><b>Convenios homologados por año</b><span>Cantidad de ordenanzas por año de sanción, según tipo de convenio</span></figcaption>
+      <div class="leyenda-g" id="lgAnio"></div>
+      <div id="gAnio"></div>
+      <div class="fuente">Fuente: Digesto H.C.D. San Andrés de Giles.</div>
+    </figure>
+    <figure class="graf">
+      <figcaption><b>Cuánto se cede en cada loteo</b><span>Parcelas al Municipio sobre parcelas del proyecto, convenios de incorporación de suelo (tipo A)</span></figcaption>
+      <div id="gCesion"></div>
+      <div class="fuente">Fuente: texto sancionado de cada ordenanza. Sólo convenios que informan ambas cifras.</div>
+    </figure>
+    <figure class="graf">
+      <figcaption><b>Qué quedó inscripto</b><span>Estado catastral en ARBA (septiembre 2026) de la subdivisión o la transferencia convenida</span></figcaption>
+      <div id="gArba"></div>
+      <div class="fuente">Fuente: parcelario ARBA 09-2026, cotejado parcela por parcela.</div>
+    </figure>
+  </div>
+  <div class="lectura" id="lectura"></div>
+</section>
+
+<section id="verificacion" class="sec">
+  <header><span class="n">II</span><h2>Verificación</h2><p>Para cada ordenanza: si la subdivisión o la transferencia pactada figura hoy en el catastro provincial, y qué dice el registro de titulares. Clic en una fila para verla en el plano.</p></header>
+  <div class="resumen-v" id="fVer" role="group" aria-label="Filtrar por estado catastral"></div>
+  <div class="tabla-c"><table id="tVer"><thead><tr><th>Ord.</th><th>Sanción</th><th>Partes</th><th>Localidad</th><th>Tipo</th><th>Catastro ARBA</th><th>Observación</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="datos" class="sec">
+  <header><span class="n">III</span><h2>Datos</h2><p>Todo lo que alimenta esta página, para abrir en QGIS, una planilla o un programa propio.</p></header>
+  <div class="descargas">
+    <a class="dl" href="descargas/convenios_urbanisticos_sag.json" download><span class="fmt">JSON · 79 KB</span><b>Base de convenios</b><p>35 convenios homologados y 23 firmados, en trámite o proyectados, con fechas, cifras, contraprestaciones, registro de la Dirección y estado ARBA. Incluye resumen y marco normativo.</p><span class="ir">Descargar ↓</span></a>
+    <a class="dl" href="descargas/SIG_Convenios_SAG.gpkg" download><span class="fmt">GeoPackage · 224 KB</span><b>SIG de convenios</b><p>Capas <span class="mono">convenios</span> (44 áreas), <span class="mono">zona_cou_sujeta_convenio</span> y la tabla <span class="mono">convenios_sin_localizar</span>. EPSG:4326.</p><span class="ir">Descargar ↓</span></a>
+    <a class="dl" href="descargas/convenios_sag.geojson" download><span class="fmt">GeoJSON · 158 KB</span><b>Áreas convenidas</b><p>Los 44 polígonos localizados con todos sus atributos, sin simplificar. Para web y para QGIS.</p><span class="ir">Descargar ↓</span></a>
+    <a class="dl" href="descargas/convenios_sag.csv" download><span class="fmt">CSV · 60 KB</span><b>Tabla plana</b><p>Los 57 registros en una sola tabla, con coordenadas del punto representativo cuando hay plano. UTF-8.</p><span class="ir">Descargar ↓</span></a>
+  </div>
+</section>
+
+<section id="metodo" class="sec">
+  <header><span class="n">IV</span><h2>Método</h2><p>Cómo se armó la base, qué se verificó y qué no.</p></header>
+  <div class="dos">
+    <div class="prosa">
+      <p><b>Universo.</b> Se leyeron las ordenanzas del Digesto del H.C.D. sancionadas desde 2008 y se separaron las que homologan o autorizan convenios con privados sobre suelo: incorporación de suelo con cesión, permutas, compensaciones en obra, regularizaciones dominiales y excepciones de uso. Se sumaron los convenios firmados, en trámite o proyectados que figuran en el registro «Gestión de suelo 2009-2026» de la Dirección de Planeamiento y Obras Particulares y en los archivos municipales.</p>
+      <p><b>Cifras.</b> Superficies, parcelas, cesiones y cuadras se tomaron del texto sancionado y se cotejaron una por una con el registro de la Dirección. Donde no coinciden, manda la ordenanza y la diferencia queda anotada en el seguimiento.</p>
+      <p><b>Plano.</b> Cada nomenclatura se buscó en el parcelario ARBA de septiembre de 2026 y, como respaldo, en el parcelario del Visor COU. Cuando la parcela de origen ya fue subdividida se dibujan las parcelas resultantes.</p>
+      <dl class="defs">
+        <dt><span class="estado" style="--c:var(--ok)">Exacta</span></dt><dd>La parcela citada en la ordenanza existe y se dibuja tal cual.</dd>
+        <dt><span class="estado" style="--c:var(--medio)">Aproximada</span></dt><dd>Se dibujan las manzanas o parcelas resultantes de la subdivisión, o un conjunto mayor que la contiene.</dd>
+        <dt><span class="estado" style="--c:var(--no)">Inferida</span></dt><dd>La nomenclatura no figura; se ubica por superficie, titular, calles o antecedentes. Línea punteada en el plano.</dd>
+      </dl>
+      <p><b>Verificación catastral.</b> Para cada convenio se revisó si la subdivisión o la transferencia pactada figura en ARBA y a nombre de quién. Los titulares sólo se nombran cuando son parte del convenio, porque así aparecen en la ordenanza publicada. No se revisaron escrituras, planos de mensura en trámite ni obras.</p>
+      <h3 style="margin-top:22px">Advertencias</h3>
+      <ul class="adv" id="adv"></ul>
+    </div>
+    <div>
+      <h3>Marco normativo</h3>
+      <div class="tabla-c marco"><table><thead><tr><th>Año</th><th>Norma</th><th>Contenido</th></tr></thead><tbody id="tMarco"></tbody></table></div>
+      <h3 style="margin-top:26px">Fuentes</h3>
+      <ul class="adv">
+        <li><a href="https://surtecto.github.io/HCD-SAG-Digesto2026/">Digesto del H.C.D. de San Andrés de Giles</a>, textos sancionados.</li>
+        <li>Registro «Gestión de suelo 2009-2026», Dirección de Planeamiento y Obras Particulares.</li>
+        <li>Parcelario ARBA, corte del 09-09-2026.</li>
+        <li>Parcelario y zonificación del Código de Ordenamiento Urbano 2026 (Visor COU).</li>
+        <li>Archivos de convenios de la Municipalidad (borradores, cálculos y notas).</li>
+        <li><a href="https://surtecto.github.io/WEB-Plan-SAG-V3/">Plan de Ordenamiento Territorial SAG</a>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie-sitio">
+  <div class="in">
+    <span>Convenios urbanísticos de San Andrés de Giles 2008–2026 · Arq. Juan Patricio Addesso</span>
+    <span>Fondos: © OpenStreetMap · Esri World Imagery · Parcelario ARBA</span>
+  </div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+
+<script src="lib/leaflet.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

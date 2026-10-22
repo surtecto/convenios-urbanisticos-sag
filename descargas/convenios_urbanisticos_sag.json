@@ -1,0 +1,2239 @@
+{
+  "titulo": "Convenios urbanísticos de San Andrés de Giles 2008-2026",
+  "version": "2026-10-22",
+  "autor": "Arq. Juan Patricio Addesso – Mat. CAPBA 020811",
+  "descripcion": "Base de convenios urbanísticos homologados por el H.C.D. y de convenios firmados, en trámite o proyectados, conciliada con el registro «Gestión de suelo 2009-2026» de la Dirección de Planeamiento y Obras Particulares.",
+  "advertencias": [
+    "Homologado no equivale a ejecutado. El estado catastral (subdivisión y titular) se verificó en ARBA 09-2026; las escrituras y obras no.",
+    "Superficies y parcelas se toman de los considerandos; null = sin dato.",
+    "suelo_municipio_m2 excluye las cesiones obligatorias del DL 8912/77; marcado como estimado cuando el texto da lotes y no metros.",
+    "El canje 2389/21 → 2390/21 no se suma dos veces en los agregados.",
+    "En 2021 conviven dos numeraciones de ordenanzas (Ord. 2426/21); se usa la correlativa."
+  ],
+  "tipos": {
+    "A": "Incorporación de suelo con cesión de lotes o tierra",
+    "B": "Permuta o canje de inmuebles",
+    "C": "Compensación en obra o materiales",
+    "D": "Regularización dominial",
+    "E": "Excepción de uso o indicadores"
+  },
+  "estados": {
+    "homologado": "Con ordenanza de homologación o autorización en el digesto",
+    "firmado_sin_ordenanza": "Firmado según el registro de la Dirección, sin ordenanza en el digesto",
+    "en_tramite_hcd": "Ingresado al Concejo y pendiente",
+    "proximo_a_firma": "Acordado, sin firma",
+    "proyecto_no_homologado": "Borrador, cálculo o propuesta",
+    "registro_sin_ordenanza": "Entrada del registro que no es convenio con privados"
+  },
+  "resumen": {
+    "convenios_homologados": 35,
+    "ordenanzas_homologatorias": 34,
+    "por_tipo": {
+      "B": 5,
+      "A": 21,
+      "C": 7,
+      "D": 1,
+      "E": 1
+    },
+    "por_periodo_informe": {
+      "2008-2011": 1,
+      "2012-2015": 7,
+      "2016-2019": 3,
+      "2020-2023": 17,
+      "2024-2026": 7
+    },
+    "parcelas_proyectadas": 878,
+    "parcelas_municipio": 132,
+    "superficie_involucrada_ha": 126.0,
+    "suelo_municipio_ha": 47.4,
+    "suelo_municipio_reserva_y_parque_ha": 32.0,
+    "cesion_parcelas_tipo_A_pct": 11.4,
+    "cesion_parcelas_tipo_A_mediana_pct": 9.7,
+    "registro_dpyop": {
+      "entradas": 43,
+      "parcelas_totales": 2726,
+      "conveniadas_declaradas": 463,
+      "pct_declarado": 17.0,
+      "suma_real_columna_conveniadas": 505,
+      "depurado": {
+        "entradas": 39,
+        "parcelas": 2256,
+        "conveniadas": 298,
+        "pct": 13.2
+      },
+      "cesion_efectiva_sin_acuerdos_de_precio_pct": 8.6
+    }
+  },
+  "convenios_homologados": [
+    {
+      "id": "CU-001",
+      "estado": "homologado",
+      "anio_homologacion": 2010,
+      "fecha_sancion": "2010-12-15",
+      "mandato": "2007-2011",
+      "ordenanza": "1510/10",
+      "normas_relacionadas": [
+        "1774/14"
+      ],
+      "partes": "Stella Maris Yacoy",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. D Qta. 6 Pc. 3a y Qta. 7 Mz. 7a (Av. Scully y Gloria Carbone)",
+      "tipo": "B",
+      "tipo_descripcion": "Permuta o canje de inmuebles",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Permuta: los propietarios ceden la fracción 3 y donan las parcelas 2, 4 y 5 (espacio público y unidad académica); el Municipio cede la parcela Circ. I Secc. A Mz. 304 Pc. 3a y desafecta parcialmente calle Alsina.",
+      "destino": "Expansión Este prevista por el Plan Estratégico 2001; espacio público y nueva unidad académica.",
+      "seguimiento": "Homologado 15/12/2010; desafectaciones para escriturar en 2014 (Ord. 1774).",
+      "reformulado_por": null,
+      "subdivision_arba": "sin_dato",
+      "dominio_arba": "Las parcelas municipales permutadas (Secc. A Mz. 304 Pc. 3a) figuran hoy a nombre de particulares: la permuta se ejecutó.",
+      "registro_dpyop": [
+        {
+          "fila": 1,
+          "nombre": "Yacoy, Stella",
+          "anio_firma": 2010,
+          "parcelas_totales": 150,
+          "parcelas_conveniadas": 2,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación parcela Escuela Secundaria  y Plaza Manzana"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-002",
+      "estado": "homologado",
+      "anio_homologacion": 2013,
+      "fecha_sancion": "2013-05-22",
+      "mandato": "2011-2015",
+      "ordenanza": "1674/13",
+      "normas_relacionadas": [
+        "1694/13",
+        "1823/15"
+      ],
+      "partes": "Claudio Daniel Monti",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 118at (luego 118dr/118ds)",
+      "tipo": "B",
+      "tipo_descripcion": "Permuta o canje de inmuebles",
+      "superficie_m2": 44105,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 44105,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Permuta: el Municipio entrega 6 parcelas (Circ. I Secc. B Mz. 183 Pc. 2a a 7a, Malvinas y Docentes Gilenses) y recibe 4 ha 41 a 05 ca.",
+      "destino": "Programa Familia Propietaria (vivienda social, Ley 14.449); 87 lotes de ≈250 m² según el Proyecto Particularizado 2014.",
+      "seguimiento": "Homologado 2013; adenda por nuevo plano 94-0001-2014 (Ord. 1823/15).",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Las seis parcelas municipales de la Mz. 183 figuran a nombre de la familia Monti: la permuta se ejecutó. La 118at hoy es 118dr y 118ds.",
+      "registro_dpyop": [
+        {
+          "fila": 3,
+          "nombre": "Monti",
+          "anio_firma": 2013,
+          "parcelas_totales": 1,
+          "parcelas_conveniadas": 87,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 6pc por 1 macizo"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-003",
+      "estado": "homologado",
+      "anio_homologacion": 2013,
+      "fecha_sancion": "2013-09-18",
+      "mandato": "2011-2015",
+      "ordenanza": "1704/13",
+      "normas_relacionadas": [
+        "1649/12"
+      ],
+      "partes": "María Lorena, Mariana y Arturo Padial",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. D Qta. 1 Pc. 9 (calle Sarmiento)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": 2,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Donación de las parcelas 5, 6 y 7 de la Mz. 2 (la 7 como espacio verde DL 8912); el Municipio ejecuta infraestructura.",
+      "destino": "Tierra para déficit habitacional.",
+      "seguimiento": "Homologado 18/09/2013.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Mz. 1N subdividida; lotes a nombre de los propietarios y de terceros.",
+      "registro_dpyop": [
+        {
+          "fila": 8,
+          "nombre": "Padial",
+          "anio_firma": 2014,
+          "parcelas_totales": 25,
+          "parcelas_conveniadas": 2,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación Oeste de la cañada"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-004",
+      "estado": "homologado",
+      "anio_homologacion": 2014,
+      "fecha_sancion": "2014-06-18",
+      "mandato": "2011-2015",
+      "ordenanza": "1755/14",
+      "normas_relacionadas": [
+        "Res. 316/14",
+        "1892/15"
+      ],
+      "partes": "Familia Alvarez (Carmen, Karina, Claudio) y Dora Bongiorno",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. D Qta. 1 Pc. 13, 14, 15a, 15b y 16 (Illia y 503)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": 67,
+      "parcelas_municipio": 6,
+      "cesion_pct_parcelas": 9.0,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 67 parcelas, 6 al Municipio con cargo y una fracción de 1.750 m² para espacio verde y equipamiento; 45 de las 61 reservadas se venden a beneficiarios PRO.CRE.AR a $100.000. El Municipio ejecuta calles, pluviales, agua, arbolado, alumbrado, red eléctrica, mensura y subdivisión.",
+      "destino": "PRO.CRE.AR (crédito lote + vivienda).",
+      "seguimiento": "Homologado 18/06/2014. A oct. 2015: 32 + 3 escrituras y 4 renuncias; readecuación por Ord. 1892/15.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Loteo registrado en las Mz. 1R, 1W, 1AA, 1AE y 1AM; lotes a nombre de los propietarios y de compradores individuales.",
+      "registro_dpyop": [
+        {
+          "fila": 4,
+          "nombre": "Alvarez",
+          "anio_firma": 2014,
+          "parcelas_totales": 69,
+          "parcelas_conveniadas": 50,
+          "localizacion": "Cabecera",
+          "compensacion": "Acuerdo de precio para PROCREAR"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-005",
+      "estado": "homologado",
+      "anio_homologacion": 2014,
+      "fecha_sancion": "2014-12-17",
+      "mandato": "2011-2015",
+      "ordenanza": "1815/14",
+      "normas_relacionadas": [
+        "2030/17"
+      ],
+      "partes": "Jorge y Daniel García",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 118dg y 118dm (NO de calle Illia)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 161328,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Donación de 16 ha 13 a 28 ca para Reserva Urbana Natural; 2,5 manzanas para COPTEBA y 20 lotes a precio pactado ($100.000 contado; $130.000 y $150.000 en cuotas) para FEB, Bomberos y municipales. El Municipio ejecuta calles, pluviales, arbolado y agua.",
+      "destino": "Reserva Urbana Natural; acceso a lote de colectivos organizados.",
+      "seguimiento": "Convenio 01/10/2014; adenda 2017 por renuncias y sorteo ante escribano.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Barrio García registrado en la Ch. 1 de la Secc. B (lotes a nombre de los propietarios). La 118DZ (≈16,2 ha, sin titular informado) es la probable Reserva Urbana Natural donada.",
+      "registro_dpyop": [
+        {
+          "fila": 5,
+          "nombre": "García, J y D",
+          "anio_firma": 2014,
+          "parcelas_totales": 149,
+          "parcelas_conveniadas": 59,
+          "localizacion": "Cabecera",
+          "compensacion": "15has. RUN y Acuerdo de precio 38 pc COPTEBA,  6pc FEB, 1pc Bomberos, 13pc Emp Municipales"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-006",
+      "estado": "homologado",
+      "anio_homologacion": 2015,
+      "fecha_sancion": "2015-04-29",
+      "mandato": "2011-2015",
+      "ordenanza": "1833/15",
+      "normas_relacionadas": [
+        "2774/25"
+      ],
+      "partes": "Ana María y Rodolfo Gallo",
+      "cantidad_convenios": 1,
+      "localidad": "Cucullú",
+      "nomenclatura": "Circ. IX Pc. 933e",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Cesión gratuita de la manzana 7. El Municipio promueve el cambio de zonificación (Ley 14.449) y abre calles a su costo.",
+      "destino": "Planta de almacenamiento y vaporización de propano y red de gas para Cucullú.",
+      "seguimiento": "Convenio 04/03/2015; apertura de calles del loteo aprobada recién en 2025 (Ord. 2774).",
+      "reformulado_por": null,
+      "subdivision_arba": "parcial",
+      "dominio_arba": "La apertura de calles del loteo se aprobó en 2025 (Ord. 2774/25); la 933e ya no figura en ARBA 2026.",
+      "registro_dpyop": [
+        {
+          "fila": 7,
+          "nombre": "Gallo, Rodolfo",
+          "anio_firma": 2014,
+          "parcelas_totales": 159,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cucullú",
+          "compensacion": "1 manzana Planta proveedora de Gas Cucullú"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-007",
+      "estado": "homologado",
+      "anio_homologacion": 2015,
+      "fecha_sancion": "2015-05-13",
+      "mandato": "2011-2015",
+      "ordenanza": "1841/15",
+      "normas_relacionadas": [],
+      "partes": "Oscar Pedro García y Alberto Eduardo Ruiz (2 convenios)",
+      "cantidad_convenios": 2,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. D Qta. 8 Pc. 5b; Secc. D Pc. 36e y 37a",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 3324.41,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Cesión de franjas de 7,50 m (2.012,96 + 1.311,45 m2). El Municipio promueve el cambio de zonificación.",
+      "destino": "Cuneta pluvial para el Barrio Gracias a Dios.",
+      "seguimiento": "Convenios dic. 2014 / ene. 2015; homologados 13/05/2015.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_aplica",
+      "dominio_arba": "Las parcelas de origen siguen a nombre de los propietarios; las franjas cedidas no figuran como parcelas propias.",
+      "registro_dpyop": [
+        {
+          "fila": 6,
+          "nombre": "García, Oscar",
+          "anio_firma": 2014,
+          "parcelas_totales": 21,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cabecera",
+          "compensacion": "Canal aliviador B° Gracias a Dios"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-008",
+      "estado": "homologado",
+      "anio_homologacion": 2016,
+      "fecha_sancion": "2016-11-23",
+      "mandato": "2015-2019",
+      "ordenanza": "1964/16",
+      "normas_relacionadas": [],
+      "partes": "Eduardo Alberto García",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 118dn (Alsina Oeste y 517)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 35673,
+      "parcelas_proyecto": 56,
+      "parcelas_municipio": 6,
+      "cesion_pct_parcelas": 10.7,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Dona 6 lotes (Mz. 3); se reserva 50. Cesiones DL 8912: 1.621,96 m2.",
+      "destino": "Vivienda única, unifamiliar y de ocupación permanente.",
+      "seguimiento": "Homologado 23/11/2016.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La 118DN figura entera (35.935 m²), sin titular informado: el loteo de 56 parcelas no está registrado.",
+      "registro_dpyop": [
+        {
+          "fila": 9,
+          "nombre": "García, Eduardo",
+          "anio_firma": 2016,
+          "parcelas_totales": 57,
+          "parcelas_conveniadas": 6,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación Oeste de la cañada"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-009",
+      "estado": "homologado",
+      "anio_homologacion": 2017,
+      "fecha_sancion": "2017-03-22",
+      "mandato": "2015-2019",
+      "ordenanza": "1990/17",
+      "normas_relacionadas": [
+        "2420/21"
+      ],
+      "partes": "María del Carmen Alvarez de Campassi",
+      "cantidad_convenios": 1,
+      "localidad": "Azcuénaga",
+      "nomenclatura": "Circ. XII Pc. 1635b",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 118991,
+      "parcelas_proyecto": 107,
+      "parcelas_municipio": 11,
+      "cesion_pct_parcelas": 10.3,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 107 parcelas dona 11; el Municipio tramita el cambio de zonificación.",
+      "destino": "Vivienda única con prioridad a pobladores rurales (evitar desarraigo).",
+      "seguimiento": "Homologado mar. 2017; reformulado en 2021 (72 parcelas, 7 donadas).",
+      "reformulado_por": "2420/21",
+      "subdivision_arba": "registrada",
+      "dominio_arba": "La 1635b ya no existe: subdividida en las Mz. 1A a 1K de la Secc. B Qta. 1, a nombre de la propietaria y familiares.",
+      "registro_dpyop": [
+        {
+          "fila": 11,
+          "nombre": "Alvarez de Campassi",
+          "anio_firma": 2017,
+          "parcelas_totales": 84,
+          "parcelas_conveniadas": 7,
+          "localizacion": "Azcuénaga",
+          "compensacion": "Ampliación urbana de Azcuénaga"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-010",
+      "estado": "homologado",
+      "anio_homologacion": 2017,
+      "fecha_sancion": "2017-03-22",
+      "mandato": "2015-2019",
+      "ordenanza": "1995/17",
+      "normas_relacionadas": [],
+      "partes": "Loris Adolfo Giazzon",
+      "cantidad_convenios": 1,
+      "localidad": "San Alberto",
+      "nomenclatura": "Circ. V Secc. A Mz. 9 Pc. 11 y Mz. 10 Pc. 1-6",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 3754,
+      "parcelas_proyecto": 9,
+      "parcelas_municipio": 8,
+      "cesion_pct_parcelas": 88.9,
+      "suelo_municipio_m2": 3453.07,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Dona 3.453,07 m2 (8 de 9 lotes resultantes). El Municipio gestiona la línea de baja tensión de la zona urbana de San Alberto.",
+      "destino": "Vivienda para habitantes de San Alberto.",
+      "seguimiento": "Homologado 2017.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Mz. 9 y 10 subdivididas; la mayoría de los lotes sigue a nombre del propietario. Ningún lote figura a nombre del Municipio.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026"
+      ]
+    },
+    {
+      "id": "CU-011",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-05-27",
+      "mandato": "2019-2023",
+      "ordenanza": "2357/21",
+      "normas_relacionadas": [],
+      "partes": "Laguna de las Pampas S.A.",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera (cantera en Villa Espil)",
+      "nomenclatura": "Cantera Circ. IX Pc. 1081 (61 ha 28 a); inmueble Circ. I Secc. D Qta. 1 Pc. 12 (503, Sarmiento e Illia)",
+      "tipo": "B",
+      "tipo_descripcion": "Permuta o canje de inmuebles",
+      "superficie_m2": 8821,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 6616,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Compensación de la deuda por derecho de cantera (1.104.314 m³ excavados): 75 % de un inmueble de 8.821 m² más $1.254.800 en efectivo; tasación del Banco Provincia y de una comisión municipal.",
+      "destino": "Suelo para 15 viviendas (lámina «Viviendas por convenio», 2021).",
+      "seguimiento": "Convenio 26/03/2015; adenda; homologado 2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "La Qta. 1 Pc. 12 figura fraccionada (12A sin titular y 12B a nombre de la empresa).",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026"
+      ]
+    },
+    {
+      "id": "CU-012",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-07-22",
+      "mandato": "2019-2023",
+      "ordenanza": "2384/21",
+      "normas_relacionadas": [],
+      "partes": "Jorge y Daniel García (2.º convenio)",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Secc. B Ch. 1 Mz. 1D, 1E, 1F y Pc. 118dw",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 38147,
+      "parcelas_proyecto": 60,
+      "parcelas_municipio": 12,
+      "cesion_pct_parcelas": 20.0,
+      "suelo_municipio_m2": 3600,
+      "suelo_municipio_estimado": true,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 60 parcelas dona 12 (lotes de 300 m2 en 118dw); se reservan 48.",
+      "destino": "Banco de tierras / vivienda.",
+      "seguimiento": "Convenio 19/07/2021; homologado 22/07/2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "parcial",
+      "dominio_arba": "Mz. 1D, 1E y 1F subdivididas (lotes a nombre de los propietarios); la 118DW sigue entera y a nombre de la familia: los 12 lotes municipales no están registrados.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026"
+      ]
+    },
+    {
+      "id": "CU-013",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-07-22",
+      "mandato": "2019-2023",
+      "ordenanza": "2385/21",
+      "normas_relacionadas": [],
+      "partes": "Fideicomiso Pueblos y Campos (Karen L. Yacoy)",
+      "cantidad_convenios": 1,
+      "localidad": "Azcuénaga",
+      "nomenclatura": "Circ. XII Secc. A Mz. 14 Pc. 1",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 10505.23,
+      "parcelas_proyecto": 31,
+      "parcelas_municipio": 3,
+      "cesion_pct_parcelas": 9.7,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 31 lotes dona 3.",
+      "destino": "Vivienda única.",
+      "seguimiento": "Homologado 2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Mz. 14 subdividida en 31 lotes; los tres lotes donados (8, 22 y 24) siguen a nombre de la fiduciaria: la donación no está inscripta.",
+      "registro_dpyop": [
+        {
+          "fila": 20,
+          "nombre": "Yacoy, Karen",
+          "anio_firma": 2020,
+          "parcelas_totales": 31,
+          "parcelas_conveniadas": 3,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación urbana Azcuénaga"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-014",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-08-05",
+      "mandato": "2019-2023",
+      "ordenanza": "2389/21",
+      "normas_relacionadas": [
+        "2390/21"
+      ],
+      "partes": "Angélica y Lorenzo Carello, Di Battista, Arriondo, Veloz, Marchesi, Segurola y familia Busca",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera / Cucullú",
+      "nomenclatura": "Circ. I Secc. D Qta. 1 Pc. 8; Circ. II Pc. 118EC-118ED; Circ. I Secc. E Qta. 1 Pc. 20; Circ. I Secc. D Qta. 8 Pc. 39-38b; Circ. IX Pc. 917g, 904k (fr.) y Secc. B Fr. 2 Pc. 1",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 294566,
+      "parcelas_proyecto": 366,
+      "parcelas_municipio": 36,
+      "cesion_pct_parcelas": 9.8,
+      "suelo_municipio_m2": 11734.16,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 366 parcelas donan 36 (≈10 %), con infraestructura y escrituración a cargo de los propietarios.",
+      "destino": "Las 36 parcelas se entregan en canje por la parcela 118CM (convenio Roldán y otros).",
+      "seguimiento": "Autorizado 05/08/2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "parcial",
+      "dominio_arba": "Dos de los seis predios están loteados: Qta. 1 Pc. 8 (101 lotes a nombre de A. Carello, Mz. 1A a 1F) y 118EC/ED (63 lotes a nombre de L. Carello, Secc. B Ch. 2). Los predios de Di Battista y otros, Segurola, Busca y la fracción de la 904K siguen enteros.",
+      "registro_dpyop": [
+        {
+          "fila": 13,
+          "nombre": "Carelo, Angélica",
+          "anio_firma": 2020,
+          "parcelas_totales": 97,
+          "parcelas_conveniadas": 10,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos- Amp. Oeste de la cañada"
+        },
+        {
+          "fila": 14,
+          "nombre": "Carelo, Lorenzo",
+          "anio_firma": 2020,
+          "parcelas_totales": 62,
+          "parcelas_conveniadas": 6,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos- Amp. Oeste de la cañada"
+        },
+        {
+          "fila": 15,
+          "nombre": "Di Battista",
+          "anio_firma": 2020,
+          "parcelas_totales": 45,
+          "parcelas_conveniadas": 5,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos - Amp. B° San Bernardo"
+        },
+        {
+          "fila": 16,
+          "nombre": "Mariño",
+          "anio_firma": 2020,
+          "parcelas_totales": 41,
+          "parcelas_conveniadas": 4,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos - Amp. Este del área urbana"
+        },
+        {
+          "fila": 17,
+          "nombre": "Busca",
+          "anio_firma": 2020,
+          "parcelas_totales": 117,
+          "parcelas_conveniadas": 12,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos- Amp. Cucullú"
+        },
+        {
+          "fila": 18,
+          "nombre": "Sabinio",
+          "anio_firma": 2020,
+          "parcelas_totales": 47,
+          "parcelas_conveniadas": 5,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos- Amp. Cucullú"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-015",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-08-05",
+      "mandato": "2019-2023",
+      "ordenanza": "2390/21",
+      "normas_relacionadas": [
+        "2519/22",
+        "2572/23"
+      ],
+      "partes": "Micaela Roldán y otros 21 aportantes",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 118CM (Illia y Arroyo de Giles)",
+      "tipo": "B",
+      "tipo_descripcion": "Permuta o canje de inmuebles",
+      "superficie_m2": 30000,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 30000,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Los aportantes compran y transfieren al Municipio 3 ha (118CM) a cambio de las 36 parcelas del convenio Carello y otros (11.734 m2).",
+      "destino": "PRO.CRE.AR (9.928,73 m2, Ord. 2572/23) y nuevo edificio escolar (Ord. 2519/22).",
+      "seguimiento": "Autorizado 05/08/2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_aplica",
+      "dominio_arba": "La 118CM figura a nombre de un particular: la transferencia al Municipio no está inscripta.",
+      "registro_dpyop": [
+        {
+          "fila": 19,
+          "nombre": "Asociación Amigos",
+          "anio_firma": 2020,
+          "parcelas_totales": 409,
+          "parcelas_conveniadas": 60,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos 77 Viv Procrear y Pc Unidad Académica"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-016",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-08-05",
+      "mandato": "2019-2023",
+      "ordenanza": "2391/21",
+      "normas_relacionadas": [
+        "2466/22",
+        "2506/22",
+        "2571/23"
+      ],
+      "partes": "Raúl Américo Carello",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 118cs, 118da y 118m (Illia y Rawson)",
+      "tipo": "B",
+      "tipo_descripcion": "Permuta o canje de inmuebles",
+      "superficie_m2": 211322,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 165482,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Dona 15 ha 84 a para Parque Urbano Natural (a cambio de 10 espacios verdes municipales, 16.072 m2, y de futuras cesiones) y 7.082 m2 por cambio de indicadores.",
+      "destino": "Parque Urbano Natural; PRO.CRE.AR 70 viviendas proyectadas (6.394,69 m2 de 118cs, Ord. 2571/23).",
+      "seguimiento": "Autorizado 05/08/2021; permuta de espacios verdes 2022; adenda 01/06/2022 por demoras de escrituración.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_aplica",
+      "dominio_arba": "Las parcelas 118CS, 118DA y 118M siguen a nombre de R. A. Carello: la donación del Parque Urbano Natural y la transferencia de la 118CS al PRO.CRE.AR no están inscriptas.",
+      "registro_dpyop": [
+        {
+          "fila": 26,
+          "nombre": "Carelo, Raúl",
+          "anio_firma": 2021,
+          "parcelas_totales": 34,
+          "parcelas_conveniadas": 20,
+          "localizacion": "Cabecera",
+          "compensacion": "15has de PUN y RUN y 18 viv. PROCREAR- Permuta EV"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-017",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-10-14",
+      "mandato": "2019-2023",
+      "ordenanza": "2420/21",
+      "normas_relacionadas": [
+        "1990/17"
+      ],
+      "partes": "María del Carmen Alvarez de Campassi (reformulación)",
+      "cantidad_convenios": 1,
+      "localidad": "Azcuénaga",
+      "nomenclatura": "Circ. XII Pc. 1635b",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 118991,
+      "parcelas_proyecto": 72,
+      "parcelas_municipio": 7,
+      "cesion_pct_parcelas": 9.7,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 72 parcelas dona 7 (Mz. 1k).",
+      "destino": "Vivienda.",
+      "seguimiento": "Convenio 31/08/2021; homologado 14/10/2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Subdivisión registrada (Secc. B Qta. 1 Mz. 1A a 1K).",
+      "registro_dpyop": [
+        {
+          "fila": 11,
+          "nombre": "Alvarez de Campassi",
+          "anio_firma": 2017,
+          "parcelas_totales": 84,
+          "parcelas_conveniadas": 7,
+          "localizacion": "Azcuénaga",
+          "compensacion": "Ampliación urbana de Azcuénaga"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-018",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-11-11",
+      "mandato": "2019-2023",
+      "ordenanza": "2437/21",
+      "normas_relacionadas": [],
+      "partes": "Néstor Ángel Di Maurizio",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. D Qta. 8 Pc. 36d",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": 7,
+      "parcelas_municipio": 1,
+      "cesion_pct_parcelas": 14.3,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 7 lotes dona 1.",
+      "destino": "Vivienda.",
+      "seguimiento": "Homologado 11/11/2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La Qta. 8 Pc. 36D sigue entera, a nombre del propietario.",
+      "registro_dpyop": [
+        {
+          "fila": 12,
+          "nombre": "Di Maurizzio",
+          "anio_firma": 2020,
+          "parcelas_totales": 16,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación Este del área urbana"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-019",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-11-11",
+      "mandato": "2019-2023",
+      "ordenanza": "2439/21",
+      "normas_relacionadas": [],
+      "partes": "María Lucrecia, María Rosa y Teresa del Carmen Schittino",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 122m (Colectora Sur RN 7)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 123232,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 18291,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Rezonificación a R3-S3 de 106.377 m2; como compensación adquieren y donan Circ. I Secc. D Qta. 8 Pc. 7 (1 ha 82 a 91 ca, edificada).",
+      "destino": "Inmueble edificado para uso municipal.",
+      "seguimiento": "Homologado 11/11/2021 (condición de 60 días).",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La 122M sigue entera y figura a nombre de otro particular. La parcela donada (Qta. 8 Pc. 7) figura sin titular informado.",
+      "registro_dpyop": [
+        {
+          "fila": 24,
+          "nombre": "Schittino",
+          "anio_firma": 2021,
+          "parcelas_totales": 210,
+          "parcelas_conveniadas": 30,
+          "localizacion": "Cabecera",
+          "compensacion": "Macizo Barrio 30 viviendas"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-020",
+      "estado": "homologado",
+      "anio_homologacion": 2021,
+      "fecha_sancion": "2021-12-23",
+      "mandato": "2019-2023",
+      "ordenanza": "2452/21",
+      "normas_relacionadas": [
+        "2592/23"
+      ],
+      "partes": "Rubén Abel Gallo",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 36d (CRE-S3 y CRE-S1)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 88475.3,
+      "parcelas_proyecto": 57,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 10000,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 57 parcelas (1.000 y 2.000 m2) dona una fracción rural de 10.000 m2 junto al arroyo Giles y el Sector Industrial.",
+      "destino": "Reserva de suelo municipal.",
+      "seguimiento": "Homologado 2021.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La 36d se dividió en 36AN (≈21 ha) y 36AR (10.001 m², a nombre de R. A. Gallo): esta última es la probable fracción de 1 ha a donar, todavía no transferida.",
+      "registro_dpyop": [
+        {
+          "fila": 25,
+          "nombre": "Gallo Rubén",
+          "anio_firma": 2021,
+          "parcelas_totales": 57,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cabecera",
+          "compensacion": "1 ha. Ampliación SIM"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-021",
+      "estado": "homologado",
+      "anio_homologacion": 2022,
+      "fecha_sancion": "2022-03-31",
+      "mandato": "2019-2023",
+      "ordenanza": "2465/22",
+      "normas_relacionadas": [],
+      "partes": "Graciela Nilda Irrazábal",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. E Qta. 1 Mz. 325 Pc. 1 (R3-S2)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 4115.95,
+      "parcelas_proyecto": 12,
+      "parcelas_municipio": 1,
+      "cesion_pct_parcelas": 8.3,
+      "suelo_municipio_m2": 304.16,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 12 lotes dona 1 (304,16 m2).",
+      "destino": "Vivienda.",
+      "seguimiento": "Homologado 2022.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La parcela figura hoy como Mz. 325B Pc. 1 (4.116 m², igual a la del convenio), sin subdividir.",
+      "registro_dpyop": [
+        {
+          "fila": 21,
+          "nombre": "Irrazabal",
+          "anio_firma": 2020,
+          "parcelas_totales": 12,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación B° San Bernardo"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-022",
+      "estado": "homologado",
+      "anio_homologacion": 2022,
+      "fecha_sancion": "2022-04-13",
+      "mandato": "2019-2023",
+      "ordenanza": "2470/22",
+      "normas_relacionadas": [],
+      "partes": "Ernesto F. Gold y Yanina Carnevale",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 118EF (CRE-S3)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 57374,
+      "parcelas_proyecto": 25,
+      "parcelas_municipio": 2,
+      "cesion_pct_parcelas": 8.0,
+      "suelo_municipio_m2": 3040,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 25 parcelas (1.000 m2) donan 2 y ceden la antigua parcela 97Y como calle de 15 m.",
+      "destino": "Vivienda / conectividad.",
+      "seguimiento": "Homologado 2022.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La 118EF citada en la ordenanza no figura en ningún parcelario. La 118BE (37.486 m², zona CRE-S3) figura a nombre de E. F. Gold.",
+      "registro_dpyop": [
+        {
+          "fila": 27,
+          "nombre": "Gold, Ernesto",
+          "anio_firma": 2021,
+          "parcelas_totales": 27,
+          "parcelas_conveniadas": 2,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación norte extraurbana"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-023",
+      "estado": "homologado",
+      "anio_homologacion": 2022,
+      "fecha_sancion": "2022-05-26",
+      "mandato": "2019-2023",
+      "ordenanza": "2490/22",
+      "normas_relacionadas": [],
+      "partes": "Pedro Dionisio Rosa",
+      "cantidad_convenios": 1,
+      "localidad": "Villa Espil",
+      "nomenclatura": "Circ. IX Pc. 1046c",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 40001.88,
+      "parcelas_proyecto": 53,
+      "parcelas_municipio": 5,
+      "cesion_pct_parcelas": 9.4,
+      "suelo_municipio_m2": 1857,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 53 parcelas dona 5.",
+      "destino": "Vivienda.",
+      "seguimiento": "Homologado 2022.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La 1046C sigue entera, a nombre del propietario.",
+      "registro_dpyop": [
+        {
+          "fila": 22,
+          "nombre": "Rosa, Dionisio",
+          "anio_firma": 2020,
+          "parcelas_totales": 97,
+          "parcelas_conveniadas": 4,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación Villa Espil"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-024",
+      "estado": "homologado",
+      "anio_homologacion": 2022,
+      "fecha_sancion": "2022-11-10",
+      "mandato": "2019-2023",
+      "ordenanza": "2550/22",
+      "normas_relacionadas": [],
+      "partes": "Fideicomiso Villa Ruiz (M. E. Silva y B. N. Monsalvo)",
+      "cantidad_convenios": 1,
+      "localidad": "Villa Ruiz",
+      "nomenclatura": "Circ. XIII Pc. 1662r y 1662p (CM-S4)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 41201.67,
+      "parcelas_proyecto": 15,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": 32,
+      "contraprestacion": "Cesión de calles e infraestructura completa a cargo del fideicomiso; compensación en materiales para estabilizar y escoriar 32 cuadras.",
+      "destino": "Mejora vial de Villa Ruiz.",
+      "seguimiento": "Homologado nov. 2022.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "Las parcelas 1662R y 1662P siguen enteras.",
+      "registro_dpyop": [
+        {
+          "fila": 29,
+          "nombre": "Monsalvo, Blanca N.",
+          "anio_firma": 2022,
+          "parcelas_totales": 15,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Villa Ruiz",
+          "compensacion": "32 cuadras de tosca y escoria en Villa Ruiz"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-025",
+      "estado": "homologado",
+      "anio_homologacion": 2023,
+      "fecha_sancion": "2023-04-20",
+      "mandato": "2019-2023",
+      "ordenanza": "2587/23",
+      "normas_relacionadas": [],
+      "partes": "Catalina Jamardo",
+      "cantidad_convenios": 1,
+      "localidad": "Villa Espil",
+      "nomenclatura": "Circ. IX Secc. C Ch. 8 Pc. 5 (CA-S1)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 35163,
+      "parcelas_proyecto": 12,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": 6,
+      "contraprestacion": "480 t de mezcla asfáltica y 12 tambores de emulsión para 6 cuadras de asfalto; cesión de media calle perimetral.",
+      "destino": "Asfalto en Villa Espil.",
+      "seguimiento": "Homologado 2023.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Loteo registrado: 12 parcelas en la Ch. 8 Fr. 8, a nombre de la propietaria.",
+      "registro_dpyop": [
+        {
+          "fila": 33,
+          "nombre": "Jamardo, Catalina",
+          "anio_firma": 2023,
+          "parcelas_totales": 12,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Villa Ruiz",
+          "compensacion": "6 cuadras de asfalto en Villa Ruiz"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-026",
+      "estado": "homologado",
+      "anio_homologacion": 2023,
+      "fecha_sancion": "2023-09-28",
+      "mandato": "2019-2023",
+      "ordenanza": "2635/23",
+      "normas_relacionadas": [],
+      "partes": "H. J. Ortiz, S. Quevedo, C. A. Rosa, A. R. Pizzi y M. I. Sabinio",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera / Cucullú / Villa Espil",
+      "nomenclatura": "Circ. I Secc. D Qta. 8 Pc. 6, 8 y 9; Circ. IX Pc. 1046d, 1045b y 904k (fr.)",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": 35,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": 20919,
+      "suelo_municipio_estimado": true,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Macizo de 10.419 m2 (Mz. 4) más 35 parcelas de ≈300 m2; el Municipio entrega las 35 parcelas a S. Quevedo, quien debe venderlas a beneficiarios PRO.CRE.AR u otros que indique el Municipio.",
+      "destino": "Acceso al lote con prioridad a residentes de Cucullú y Villa Espil.",
+      "seguimiento": "Homologado 2023.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "Ninguno de los predios figura subdividido.",
+      "registro_dpyop": [
+        {
+          "fila": 30,
+          "nombre": "Sabinio, Maria Ines",
+          "anio_firma": 2023,
+          "parcelas_totales": 132,
+          "parcelas_conveniadas": 16,
+          "localizacion": "Cucullú",
+          "compensacion": "Ampliacion Cucullu"
+        },
+        {
+          "fila": 31,
+          "nombre": "Quevedo, S. y Ortiz, H.",
+          "anio_firma": 2023,
+          "parcelas_totales": 27,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cabecera",
+          "compensacion": "1 Ha. Lindera a Barrio Scully"
+        },
+        {
+          "fila": 32,
+          "nombre": "Rosa, Celina Angelica",
+          "anio_firma": 2023,
+          "parcelas_totales": 194,
+          "parcelas_conveniadas": 19,
+          "localizacion": "Villa Espil",
+          "compensacion": "Ampliacion Villa Espil"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-027",
+      "estado": "homologado",
+      "anio_homologacion": 2023,
+      "fecha_sancion": "2023-09-28",
+      "mandato": "2019-2023",
+      "ordenanza": "2636/23",
+      "normas_relacionadas": [],
+      "partes": "Maximiliano César Bondone",
+      "cantidad_convenios": 1,
+      "localidad": "Villa Espil",
+      "nomenclatura": "Circ. IX Secc. C Ch. 8 Pc. 16 (CA-S1)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 15970,
+      "parcelas_proyecto": 2,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": 2,
+      "contraprestacion": "100 t de escoria y 140 m3 de tosca para 2 cuadras.",
+      "destino": "Calles.",
+      "seguimiento": "Homologado 2023.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Subdivisión registrada (16A y 16B), a nombre del propietario.",
+      "registro_dpyop": [
+        {
+          "fila": 34,
+          "nombre": "Bondone, Maximiliano",
+          "anio_firma": 2023,
+          "parcelas_totales": 2,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "2 cuadras de tosca y escoria"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-028",
+      "estado": "homologado",
+      "anio_homologacion": 2024,
+      "fecha_sancion": "2024-04-26",
+      "mandato": "2023-2027",
+      "ordenanza": "2686/24",
+      "normas_relacionadas": [
+        "2710/24"
+      ],
+      "partes": "Delia M., Laura R. y Fernando M. Guevara Lynch",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. I Secc. B Fr. VII Pc. 1-a (Chacabuco, Lavalle, Etcheverry, Malvinas)",
+      "tipo": "D",
+      "tipo_descripcion": "Regularización dominial",
+      "superficie_m2": 19826.5,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": 6,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Regularización dominial de un inmueble en el que el Municipio tenía 23,33 % indiviso: el Municipio conserva 6 parcelas, recibe 467 m2 de equipamiento/verde y libra al uso público calles ya abiertas.",
+      "destino": "Saneamiento de títulos y trama vial.",
+      "seguimiento": "Convenio 04/03/2024; adenda ago. 2024.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La Fr. 7 Pc. 1A sigue a nombre de la titular original: la regularización no está inscripta.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026"
+      ]
+    },
+    {
+      "id": "CU-029",
+      "estado": "homologado",
+      "anio_homologacion": 2024,
+      "fecha_sancion": "2024-07-18",
+      "mandato": "2023-2027",
+      "ordenanza": "2706/24",
+      "normas_relacionadas": [],
+      "partes": "R.A.F. S.A.",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 79e",
+      "tipo": "A",
+      "tipo_descripcion": "Incorporación de suelo con cesión de lotes o tierra",
+      "superficie_m2": 21442.81,
+      "parcelas_proyecto": 26,
+      "parcelas_municipio": 2,
+      "cesion_pct_parcelas": 7.7,
+      "suelo_municipio_m2": 1260.8,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "De 26 parcelas (15 de 300 m2 y 11 de 600 m2) cede 2 (876,80 + 384 m2); espacio verde 1.629,69 m2.",
+      "destino": "Vivienda / equipamiento.",
+      "seguimiento": "Homologado 2024.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La 79E mide hoy 8.863 m² y figura a nombre de un particular; no hay loteo registrado.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026"
+      ]
+    },
+    {
+      "id": "CU-030",
+      "estado": "homologado",
+      "anio_homologacion": 2024,
+      "fecha_sancion": "2024-10-03",
+      "mandato": "2023-2027",
+      "ordenanza": "2719/24",
+      "normas_relacionadas": [],
+      "partes": "Roberto Oscar Oliva",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Secc. E Fr. I Pc. 6 (R6)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 2856.53,
+      "parcelas_proyecto": 2,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "100 t de escoria 10/30 y 37 t de escoria 0/10 (la compensación no alcanza a una parcela mínima).",
+      "destino": "Bacheo urbano.",
+      "seguimiento": "Homologado 2024.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La Fr. 1 Pc. 6 sigue entera, a nombre del propietario.",
+      "registro_dpyop": [
+        {
+          "fila": 36,
+          "nombre": "Oliva, Roberto",
+          "anio_firma": 2024,
+          "parcelas_totales": 3,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "3 cuadras de tosca y escoria"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-031",
+      "estado": "homologado",
+      "anio_homologacion": 2024,
+      "fecha_sancion": "2024-10-03",
+      "mandato": "2023-2027",
+      "ordenanza": "2720/24",
+      "normas_relacionadas": [],
+      "partes": "Micaela Oliva",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Secc. E Fr. I Pc. 3 (R6)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 2222.08,
+      "parcelas_proyecto": 2,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "31 t de escoria 10/30 y 10 t de escoria 0/10.",
+      "destino": "Bacheo urbano.",
+      "seguimiento": "Homologado 2024.",
+      "reformulado_por": null,
+      "subdivision_arba": "registrada",
+      "dominio_arba": "Subdivisión registrada (Pc. 3A y 3B), a nombre de la propietaria.",
+      "registro_dpyop": [
+        {
+          "fila": 37,
+          "nombre": "Oliva, Micaela",
+          "anio_firma": 2024,
+          "parcelas_totales": 2,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "2 cuadras de tosca y escoria"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-032",
+      "estado": "homologado",
+      "anio_homologacion": 2024,
+      "fecha_sancion": "2024-10-03",
+      "mandato": "2023-2027",
+      "ordenanza": "2721/24",
+      "normas_relacionadas": [],
+      "partes": "Agustín y Felipe Sosa",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Secc. E Fr. I Pc. 1 (R6)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 2222.07,
+      "parcelas_proyecto": 2,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "31 t de escoria 10/30 y 10 t de escoria 0/10.",
+      "destino": "Bacheo urbano.",
+      "seguimiento": "Homologado 2024.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La Fr. 1 Pc. 1 sigue entera, a nombre de uno de los propietarios.",
+      "registro_dpyop": [
+        {
+          "fila": 35,
+          "nombre": "Sosa, Felipe y Agustin",
+          "anio_firma": 2024,
+          "parcelas_totales": 2,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "2 cuadras de tosca y escoria"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CU-033",
+      "estado": "homologado",
+      "anio_homologacion": 2025,
+      "fecha_sancion": "2025-05-29",
+      "mandato": "2023-2027",
+      "ordenanza": "2755/25",
+      "normas_relacionadas": [
+        "2733/24"
+      ],
+      "partes": "Papelera San Andrés de Giles S.A.",
+      "cantidad_convenios": 1,
+      "localidad": "Cabecera (RN 7 y RP 41)",
+      "nomenclatura": "Planta en RN 7 y RP 41; depósito de ≈10.000 m² en Circ. II Pc. 118cg",
+      "tipo": "E",
+      "tipo_descripcion": "Excepción de uso o indicadores",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "cesion_pct_parcelas": null,
+      "suelo_municipio_m2": null,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "Convenio del 07/03/2025: entubamiento en calle Rawson, Paseo de la Ribera y reserva natural, ligados a la excepción de uso (Ord. 2733/24). El HCD homologó sin las cláusulas que pedían reforma del COUyT; el Ejecutivo vetó parcialmente (Dec. 1158/25). Adenda 2026: +1.925 m² de depósito y una excavadora.",
+      "destino": "Ampliación industrial preexistente (radicada desde 1980).",
+      "seguimiento": "Homologado con salvedades 29/05/2025; veto parcial del Ejecutivo.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_aplica",
+      "dominio_arba": "La 118CG figura a nombre de Papelera San Andrés S.A.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026"
+      ]
+    },
+    {
+      "id": "CU-034",
+      "estado": "homologado",
+      "anio_homologacion": 2025,
+      "fecha_sancion": "2025-08-28",
+      "mandato": "2023-2027",
+      "ordenanza": "2766/25",
+      "normas_relacionadas": [],
+      "partes": "Federico P. Mémoli (por M. M. Arturi)",
+      "cantidad_convenios": 1,
+      "localidad": "Cucullú (acceso)",
+      "nomenclatura": "Circ. IX Secc. C Ch. 8 Pc. 3 (CA-S1)",
+      "tipo": "C",
+      "tipo_descripcion": "Compensación en obra o materiales",
+      "superficie_m2": 10000,
+      "parcelas_proyecto": 2,
+      "parcelas_municipio": 0,
+      "cesion_pct_parcelas": 0.0,
+      "suelo_municipio_m2": 0,
+      "suelo_municipio_estimado": false,
+      "cuadras_mejoradas": null,
+      "contraprestacion": "45 t de escoria 10/30.",
+      "destino": "Calles urbanas.",
+      "seguimiento": "Homologado 2025.",
+      "reformulado_por": null,
+      "subdivision_arba": "no_registrada",
+      "dominio_arba": "La Ch. 8 Pc. 3 sigue entera, a nombre del titular original.",
+      "registro_dpyop": [
+        {
+          "fila": 38,
+          "nombre": "Arturi, Miguel Mario",
+          "anio_firma": 2025,
+          "parcelas_totales": 2,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "2 cuadras de tosca y escoria"
+        }
+      ],
+      "fuentes": [
+        "Digesto H.C.D. (texto sancionado)",
+        "Catastro ARBA 09-2026",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    }
+  ],
+  "otros_convenios": [
+    {
+      "id": "CP-001",
+      "estado": "proyecto_no_homologado",
+      "anio": 2010,
+      "partes": "Herederos de Oreste García y Carelo",
+      "localidad": "Cabecera (oeste del arroyo)",
+      "nomenclatura": null,
+      "superficie_m2": 345685,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "13 ha a urbanizar, resto reserva y parque; 48 parcelas como garantía escalonada; caducidad al 31/05/2011.",
+      "seguimiento": "Firmado ad referéndum por L. A. Ghione; reformulado en Ord. 1815/14, 1964/16 y 2384/21.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Drive: M-SAG Convenio Urbanización (2010)"
+      ]
+    },
+    {
+      "id": "CP-002",
+      "estado": "registro_sin_ordenanza",
+      "anio": 2011,
+      "partes": "Ex Vialidad (suelo fiscal)",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 32,
+      "parcelas_municipio": 32,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Cesión de la ex ruta 193; lotes de autoconstrucción.",
+      "seguimiento": "No es convenio con privados.",
+      "registro_dpyop": [
+        {
+          "fila": 2,
+          "nombre": "Ex Vialidad",
+          "anio_firma": 2011,
+          "parcelas_totales": 32,
+          "parcelas_conveniadas": 32,
+          "localizacion": "Cabecera",
+          "compensacion": "Cesión de Ex ruta 193 - Autoconstrucción"
+        }
+      ],
+      "fuentes": [
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-003",
+      "estado": "registro_sin_ordenanza",
+      "anio": 2016,
+      "partes": "Ex Vialidad (suelo fiscal)",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 28,
+      "parcelas_municipio": 28,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Sorteo de lotes con servicios (Ord. 1975/16).",
+      "seguimiento": "No es convenio con privados.",
+      "registro_dpyop": [
+        {
+          "fila": 10,
+          "nombre": "Ex Vialidad",
+          "anio_firma": 2016,
+          "parcelas_totales": 28,
+          "parcelas_conveniadas": 28,
+          "localizacion": "Cabecera",
+          "compensacion": "Sorteo de lotes con servicios"
+        }
+      ],
+      "fuentes": [
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-004",
+      "estado": "proyecto_no_homologado",
+      "anio": 2016,
+      "partes": "Del Carre (permuta ex matadero)",
+      "localidad": "Cabecera",
+      "nomenclatura": "Circ. II Pc. 68b",
+      "superficie_m2": 38220,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Ex matadero por predios junto a las plantas de tratamiento (7.400 y 30.810 m²); tasación 2016 $15,7 M.",
+      "seguimiento": "Sin homologación; en 2019 Cosechas Argentinas S.A. pidió comprar o permutar el predio.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "OneDrive: Convenio Del Carre"
+      ]
+    },
+    {
+      "id": "CP-005",
+      "estado": "proyecto_no_homologado",
+      "anio": 2017,
+      "partes": "José Mariño (luego Segurola, predio 1)",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 37,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Incremento estimado $7.296.000; 10 % = 4 parcelas + 6 por obras; compensación real 16 %.",
+      "seguimiento": "Absorbido por la Ord. 2389/21.",
+      "registro_dpyop": [
+        {
+          "fila": 16,
+          "nombre": "Mariño",
+          "anio_firma": 2020,
+          "parcelas_totales": 41,
+          "parcelas_conveniadas": 4,
+          "localizacion": "Cabecera",
+          "compensacion": "Permuta 3has Asoc. Amigos - Amp. Este del área urbana"
+        }
+      ],
+      "fuentes": [
+        "Drive: Convenio Mariño 07-17",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-006",
+      "estado": "proyecto_no_homologado",
+      "anio": 2020,
+      "partes": "Loteo Cucullú «TANI»",
+      "localidad": "Cucullú",
+      "nomenclatura": null,
+      "superficie_m2": 15465,
+      "parcelas_proyecto": 48,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "30 % de la plusvalía = 4 a 6 parcelas; obras ≈3 parcelas; versión 2021 con 80 lotes de 300 m² y 135 de 2.000 m².",
+      "seguimiento": "Sin constancia de homologación.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Drive: Loteo Cucullú 2020"
+      ]
+    },
+    {
+      "id": "CP-007",
+      "estado": "firmado_sin_ordenanza",
+      "anio": 2020,
+      "partes": "Mazzeo, Irma y otros",
+      "localidad": "Cabecera (norte extraurbano)",
+      "nomenclatura": null,
+      "superficie_m2": 140305.47,
+      "parcelas_proyecto": 47,
+      "parcelas_municipio": 5,
+      "suelo_municipio_m2": 10741,
+      "contraprestacion": "Cambio a CRE-S1; cesión de 5 parcelas de 2.000 m².",
+      "seguimiento": "Nota técnica 07/12/2021; sin ordenanza en el digesto.",
+      "registro_dpyop": [
+        {
+          "fila": 23,
+          "nombre": "Mazzeo",
+          "anio_firma": 2020,
+          "parcelas_totales": 47,
+          "parcelas_conveniadas": 5,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliación norte extraurbana"
+        }
+      ],
+      "fuentes": [
+        "OneDrive: NOTA COMPENSACION MAZZEO",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-008",
+      "estado": "firmado_sin_ordenanza",
+      "anio": 2021,
+      "partes": "Gerardo Berger",
+      "localidad": "Villa Espil",
+      "nomenclatura": "Circ. IX Pc. 1045a (CM-S4)",
+      "superficie_m2": 69474.95,
+      "parcelas_proyecto": 32,
+      "parcelas_municipio": 3,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Cesión de 3 lotes.",
+      "seguimiento": "Informe 01/11/2021; sin ordenanza en el digesto.",
+      "registro_dpyop": [
+        {
+          "fila": 28,
+          "nombre": "Berger",
+          "anio_firma": 2021,
+          "parcelas_totales": 32,
+          "parcelas_conveniadas": 3,
+          "localizacion": "Villa Espil",
+          "compensacion": "Ampliación Villa Espil"
+        }
+      ],
+      "fuentes": [
+        "OneDrive: INFORME BERGER VILLA ESPIL",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-009",
+      "estado": "proyecto_no_homologado",
+      "anio": 2021,
+      "partes": "Asociación Civil Los Amigos de SAG (pileta)",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Primera inscripción y cesión de acceso y estacionamiento; contraparte del convenio 118CM.",
+      "seguimiento": "Borrador.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "OneDrive: Convenio Pileta Amigos"
+      ]
+    },
+    {
+      "id": "CP-010",
+      "estado": "proyecto_no_homologado",
+      "anio": 2021,
+      "partes": "Chacras del Oeste (Villa Ruiz)",
+      "localidad": "Villa Ruiz",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Acta compromiso 29/10/2021: cesión de tierras linderas al arroyo de la Cruz.",
+      "seguimiento": "Pendiente de aprobación provincial.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Infociudad"
+      ]
+    },
+    {
+      "id": "CP-011",
+      "estado": "proyecto_no_homologado",
+      "anio": 2022,
+      "partes": "Convenio «Tuti»",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": 18180,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Permuta de 18.180 m² rurales (USD 7,70/m²) por 4 lotes urbanos de 1.315,60 m² (USD 100/m²).",
+      "seguimiento": "Propuesta.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "OneDrive: Convenio Tuti"
+      ]
+    },
+    {
+      "id": "CP-012",
+      "estado": "proyecto_no_homologado",
+      "anio": 2022,
+      "partes": "CEPT Cucullú",
+      "localidad": "Cucullú",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": 7000,
+      "contraprestacion": "Chacra de 7.000 m² para el CEPT dentro de un loteo.",
+      "seguimiento": "Propuesta.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "OneDrive: Líneas Habitar/CEPT"
+      ]
+    },
+    {
+      "id": "CP-013",
+      "estado": "proyecto_no_homologado",
+      "anio": 2023,
+      "partes": "Gustavo Llames (sector Norte)",
+      "localidad": "Cabecera (Norte)",
+      "nomenclatura": null,
+      "superficie_m2": 14902,
+      "parcelas_proyecto": 21,
+      "parcelas_municipio": 3,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Incremento $117,8 M; compensación 20 % = 3 lotes ZN5 (24 % a valor de mercado).",
+      "seguimiento": "Cálculo.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "OneDrive: Plusvalor Convenio Llames ZN 02-2023"
+      ]
+    },
+    {
+      "id": "CP-014",
+      "estado": "proximo_a_firma",
+      "anio": 2024,
+      "partes": "Juan M. Piedra y G. Jarque",
+      "localidad": "Villa Ruiz",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 25,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Materiales para 7 cuadras de asfalto.",
+      "seguimiento": "Próximo a la firma (registro 2024).",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Registro 2009-2024 (copia SIMON)"
+      ]
+    },
+    {
+      "id": "CP-015",
+      "estado": "firmado_sin_ordenanza",
+      "anio": 2025,
+      "partes": "Pablo Abraham López",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 8,
+      "parcelas_municipio": 0,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "1 cuadra de asfalto.",
+      "seguimiento": "Sin ordenanza en el digesto.",
+      "registro_dpyop": [
+        {
+          "fila": 41,
+          "nombre": "Lopez, Pablo Abraham",
+          "anio_firma": 2025,
+          "parcelas_totales": 8,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "1 cuadra de asfalto"
+        }
+      ],
+      "fuentes": [
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-016",
+      "estado": "en_tramite_hcd",
+      "anio": 2025,
+      "partes": "RALEX S.A.",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 26,
+      "parcelas_municipio": 1,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "1 parcela de 2.000 m² y 5 cuadras de asfalto.",
+      "seguimiento": "En el HCD (agosto de 2026).",
+      "registro_dpyop": [
+        {
+          "fila": 39,
+          "nombre": "RALEX S.A.",
+          "anio_firma": 2025,
+          "parcelas_totales": 26,
+          "parcelas_conveniadas": 1,
+          "localizacion": "Cabecera",
+          "compensacion": "1 pc  2000 m² y 5 cuadras de asfalto"
+        }
+      ],
+      "fuentes": [
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-017",
+      "estado": "en_tramite_hcd",
+      "anio": 2025,
+      "partes": "Cerrina, Adriana y Javier (Santiago N. Cerrina)",
+      "localidad": "Cucullú",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 116,
+      "parcelas_municipio": 18,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "6 parcelas en Cucullú, 6 en Villa Espil, 6 en la cabecera (Francia y Pichetto), 50 luminarias LED, motoniveladora y caños.",
+      "seguimiento": "Sin quórum el 25/06/2026; conflicto en el HCD.",
+      "registro_dpyop": [
+        {
+          "fila": 40,
+          "nombre": "Cerrina, Adriana y Javier",
+          "anio_firma": 2025,
+          "parcelas_totales": 116,
+          "parcelas_conveniadas": 18,
+          "localizacion": "Cucullú",
+          "compensacion": "6 Pc. Amp. Cucullu, 6 Pc. Amp. VE y 6 Pc. SAG Francia y Pichetto. 50 Luminarias acc. Cu y Motoniveladora Caterpillar"
+        }
+      ],
+      "fuentes": [
+        "Infociudad",
+        "Noticias Gilenses",
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-018",
+      "estado": "proyecto_no_homologado",
+      "anio": 2025,
+      "partes": "Reconfiguración del Tiro Federal",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Relocalización mediante convenio urbanístico.",
+      "seguimiento": "Propuesta del Plan SAG 2020-2030.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Plan SAG borrador 02-2025"
+      ]
+    },
+    {
+      "id": "CP-019",
+      "estado": "en_tramite_hcd",
+      "anio": 2026,
+      "partes": "Fernando Lucca",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 6,
+      "parcelas_municipio": 0,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Ampliación de redes de cloaca y agua.",
+      "seguimiento": "En el HCD (agosto de 2026).",
+      "registro_dpyop": [
+        {
+          "fila": 42,
+          "nombre": "Lucca, Fernando",
+          "anio_firma": 2026,
+          "parcelas_totales": 6,
+          "parcelas_conveniadas": 0,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliacion red de cloacas y agua"
+        }
+      ],
+      "fuentes": [
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-020",
+      "estado": "firmado_sin_ordenanza",
+      "anio": 2026,
+      "partes": "Ernesto Gold (2.º convenio)",
+      "localidad": "Cabecera (norte extraurbano)",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": 23,
+      "parcelas_municipio": 3,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "3 parcelas.",
+      "seguimiento": "Registro 2026.",
+      "registro_dpyop": [
+        {
+          "fila": 43,
+          "nombre": "Gold, Ernesto",
+          "anio_firma": 2026,
+          "parcelas_totales": 23,
+          "parcelas_conveniadas": 3,
+          "localizacion": "Cabecera",
+          "compensacion": "Ampliacion norte extraurbana"
+        }
+      ],
+      "fuentes": [
+        "Registro «Gestión de suelo 2009-2026» (DPyOP)"
+      ]
+    },
+    {
+      "id": "CP-021",
+      "estado": "en_tramite_hcd",
+      "anio": 2026,
+      "partes": "«Mega loteo» de Av. Scully",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": 250000,
+      "parcelas_proyecto": 250,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Escuela llave en mano y terreno para un club.",
+      "seguimiento": "En comisión (La Libertad, 24/06/2026); rechazado durante más de 15 años.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "La Libertad 24/06/2026"
+      ]
+    },
+    {
+      "id": "CP-022",
+      "estado": "proyecto_no_homologado",
+      "anio": 2026,
+      "partes": "Plan Particularizado Norte",
+      "localidad": "Cabecera (Norte)",
+      "nomenclatura": "Circ. II Pc. 77, 78, 79, 79b, 79d y 79e",
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Indicadores sólo por convenio o consorcio; renta compensada en suelo o vivienda dentro del sector.",
+      "seguimiento": "Proyecto de ordenanza.",
+      "registro_dpyop": [],
+      "fuentes": [
+        "OneDrive: NORTE/2026"
+      ]
+    },
+    {
+      "id": "CP-023",
+      "estado": "proyecto_no_homologado",
+      "anio": 2026,
+      "partes": "Propuesta Marinkovic",
+      "localidad": "Cabecera",
+      "nomenclatura": null,
+      "superficie_m2": null,
+      "parcelas_proyecto": null,
+      "parcelas_municipio": null,
+      "suelo_municipio_m2": null,
+      "contraprestacion": "Grandes parcelas residenciales con menor densidad.",
+      "seguimiento": "Discutida en el Consejo (Acta 8, 02/07/2026).",
+      "registro_dpyop": [],
+      "fuentes": [
+        "Acta 8 Consejo Municipal"
+      ]
+    }
+  ],
+  "verificacion": {
+    "fecha": "2026-10-22",
+    "metodo": "Cifras cotejadas con el texto sancionado de cada ordenanza; nomenclaturas y titulares cotejados con el catastro ARBA de septiembre de 2026 y el parcelario del Visor COU.",
+    "subdivision_arba": {
+      "sin_dato": 1,
+      "registrada": 12,
+      "parcial": 3,
+      "no_aplica": 4,
+      "no_registrada": 14
+    }
+  },
+  "marco_normativo": [
+    {
+      "anio": 2005,
+      "norma": "996/05",
+      "contenido": "Creación del Banco de Tierras"
+    },
+    {
+      "anio": 2009,
+      "norma": "1377/09",
+      "contenido": "Modificación del Banco de Tierras"
+    },
+    {
+      "anio": 2012,
+      "norma": "1645/12 y 1646/12",
+      "contenido": "Programa de lotes sociales; adjudicación"
+    },
+    {
+      "anio": 2013,
+      "norma": "1694/13",
+      "contenido": "Afectación de 118at al Programa Familia Propietaria"
+    },
+    {
+      "anio": 2014,
+      "norma": "Res. 316/14",
+      "contenido": "Encuadre de los convenios en Lotes con Servicios (Ley 14.449)"
+    },
+    {
+      "anio": 2015,
+      "norma": "1857/15",
+      "contenido": "Adhesión a la Ley 14.449 de Acceso Justo al Hábitat"
+    },
+    {
+      "anio": 2017,
+      "norma": "2055/17",
+      "contenido": "Permuta con la Arquidiócesis Mercedes-Luján (509 y Alsina Oeste por la plaza de Azcuénaga)"
+    },
+    {
+      "anio": 2019,
+      "norma": "2233/19",
+      "contenido": "COUyT: zonas con exigencia de Convenio Urbano Previo (Anexos VI y VII)"
+    },
+    {
+      "anio": 2019,
+      "norma": "2238/19",
+      "contenido": "Consejo Asesor de Acceso a la Tierra y al Hábitat (dictamen vinculante sobre convenios)"
+    },
+    {
+      "anio": 2019,
+      "norma": "2239/19",
+      "contenido": "Consejo Municipal para el Desarrollo y el Ordenamiento Territorial"
+    },
+    {
+      "anio": 2020,
+      "norma": "2309/20",
+      "contenido": "Modificación del COUyT"
+    },
+    {
+      "anio": 2021,
+      "norma": "2432/21",
+      "contenido": "Adhesión al Plan Nacional de Suelo Urbano"
+    },
+    {
+      "anio": 2022,
+      "norma": "2458/22",
+      "contenido": "Indicadores de origen para planos previos al COUyT"
+    },
+    {
+      "anio": 2022,
+      "norma": "2466/22",
+      "contenido": "Permuta de 10 espacios verdes (16.072 m2) por el Parque Urbano Natural (15,84 ha)"
+    },
+    {
+      "anio": 2022,
+      "norma": "2512/22",
+      "contenido": "Derecho de participación en la renta diferencial (10-30 %)"
+    },
+    {
+      "anio": 2022,
+      "norma": "2551/22",
+      "contenido": "Reforma del COUyT por observaciones de la Provincia"
+    },
+    {
+      "anio": 2023,
+      "norma": "2570-2572/23",
+      "contenido": "Convenio marco PRO.CRE.AR y transferencia de 118CS y 118CM"
+    },
+    {
+      "anio": 2023,
+      "norma": "2653/23",
+      "contenido": "Banco de Tierras alimentado por el producido de los convenios"
+    },
+    {
+      "anio": 2024,
+      "norma": "2724/24",
+      "contenido": "Suspensión por 90 días de los convenios de incorporación de suelo"
+    },
+    {
+      "anio": 2024,
+      "norma": "2732-2733/24",
+      "contenido": "Uso condicionado industrial en área rural; excepción Papelera"
+    },
+    {
+      "anio": 2025,
+      "norma": "2751/25",
+      "contenido": "Permuta con Cosechas Argentinas S.A. para el puente del camino de la Jabonería (530 m² de calle en desuso)"
+    },
+    {
+      "anio": 2026,
+      "norma": "2811/26",
+      "contenido": "Nuevo Consejo Municipal para el Desarrollo y el Ordenamiento Territorial"
+    }
+  ]
+}
