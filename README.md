@@ -1,12 +1,12 @@
 # Convenios urbanísticos · San Andrés de Giles 2008–2026
 
-Sitio estático con el registro, el plano y la verificación catastral de los convenios urbanísticos de San Andrés de Giles (Buenos Aires): 35 convenios homologados por el H.C.D. en 34 ordenanzas y 23 convenios firmados, en trámite o proyectados.
+Sitio estático con el registro, el plano y la verificación catastral de los convenios urbanísticos de San Andrés de Giles (Buenos Aires): los 35 convenios homologados por el H.C.D. en 34 ordenanzas. Los convenios firmados sin ordenanza, en trámite o en proyecto no se publican.
 
 **Ver en línea:** https://surtecto.github.io/convenios-urbanisticos-sag/
 
 ## Secciones
 
-- **Plano.** Áreas convenidas sobre la zonificación del COU 2026, sobre imagen satelital (Esri), con fondo de calles opcional. Cada capa se prende, se apaga y regula su opacidad. Filtros por estado, tipo y localidad, buscador y ficha de cada convenio. Cada ficha tiene su enlace (`#c=CU-012`).
+- **Plano.** Áreas convenidas sobre la zonificación del COU 2026, sobre imagen satelital (Esri), con fondo de calles opcional. Cada capa se prende, se apaga y regula su opacidad. Filtros por tipo y localidad, buscador y ficha de cada convenio. Cada ficha tiene su enlace (`#c=CU-012`).
 - **Cifras.** Convenios por año y tipo, parcelas que vuelven al Municipio en cada loteo y estado catastral en ARBA.
 - **Verificación.** Estado de la subdivisión o la transferencia pactada en el catastro ARBA de septiembre de 2026.
 - **Datos.** Descargas en JSON, GeoPackage, GeoJSON y CSV.
@@ -35,4 +35,4 @@ No usa compilación ni dependencias externas salvo los fondos de mapa. Para verl
 
 Las parcelas que quedan en dominio municipal no son donaciones: son la compensación por el mayor valor que la decisión pública otorga al suelo (Ley 14.449, art. 46 y ss.). Homologado no equivale a ejecutado. Los titulares sólo se nombran cuando son parte del convenio, tal como figuran en la ordenanza publicada.
 
-Arq. Juan Patricio Addesso · Mat. CAPBA 020811 · revisión 22-10-2026
+Arq. Juan Patricio Addesso · Mat. CAPBA 020811 · revisión 29-10-2026

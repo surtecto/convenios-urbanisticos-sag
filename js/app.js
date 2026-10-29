@@ -7,8 +7,8 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "
 const fmt = (v, d = 0) => v == null ? "s/d" : Number(v).toLocaleString("es-AR", { maximumFractionDigits: d, minimumFractionDigits: d && v % 1 ? 1 : 0 });
 const fecha = s => s ? s.slice(0, 10).split("-").reverse().join("/") : "";
 
-const TIPOS = { A: "Incorporación de suelo con compensación", B: "Permuta o canje", C: "Compensación en obra o materiales", D: "Regularización dominial", E: "Excepción de uso", P: "Sin ordenanza" };
-const EST = { hom: "Homologados", tram: "Firmados o en trámite", proy: "Proyectos" };
+const TIPOS = { A: "Incorporación de suelo con compensación", B: "Permuta o canje", C: "Compensación en obra o materiales", D: "Regularización dominial", E: "Excepción de uso" };
+const EST = { hom: "Homologados" };   // la web publica sólo convenios homologados
 const ESTLBL = { homologado: "Homologado", firmado_sin_ordenanza: "Firmado sin ordenanza", en_tramite_hcd: "En trámite en el H.C.D.", proximo_a_firma: "Próximo a la firma", proyecto_no_homologado: "Proyecto o propuesta", registro_sin_ordenanza: "Suelo fiscal (registro)" };
 const LOCLBL = { exacta: "Parcela identificada", aproximada: "Ubicación aproximada", inferida: "Ubicación inferida", no_localizada: "Sin localizar" };
 const ARBA = { registrada: ["Registrada", "--ok"], parcial: ["Parcial", "--medio"], no_registrada: ["No registrada", "--no"], no_aplica: ["No aplica", "--neutro"], sin_dato: ["Sin dato", "--neutro"] };
@@ -86,7 +86,7 @@ let zonasL, parcL, convL, convZL;
 const rotL = L.layerGroup();
 Promise.all(["data/zonas.geojson", "data/convenios.geojson", "data/registros.json", "data/zonas_convenio.geojson", "data/meta.json"].map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); })))
   .then(([zon, conv, regs, zc, meta]) => {
-    REC = regs; META = meta;
+    REC = regs.filter(r => r.estado === "homologado"); META = meta;
     zonasL = L.geoJSON(zon, { style: zonaStyle, interactive: false }).addTo(map);
     convZL = L.geoJSON(zc, { style: zconvStyle, interactive: false }).addTo(map);
     convL = L.geoJSON(conv, { style: convStyle, onEachFeature: (f, l) => {
@@ -163,24 +163,22 @@ function panelCapas() {
 
 function kpis() {
   const R = META.resumen;
-  const tram = REC.filter(r => estOf(r) === "tram").length;
   const enPlano = REC.filter(r => r.localizacion && r.localizacion !== "no_localizada").length;
-  $("#kpis").innerHTML = [[R.convenios_homologados, "homologados"], [tram, "firmados o en trámite"], [fmt(R.suelo_municipio_ha, 1), "ha al Municipio"], [enPlano, "áreas en el plano"]]
+  $("#kpis").innerHTML = [[R.convenios_homologados, "homologados"], [R.ordenanzas_homologatorias, "ordenanzas"], [fmt(R.suelo_municipio_ha, 1), "ha al Municipio"], [enPlano, "áreas en el plano"]]
     .map(([v, l]) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join("");
 }
 
 function filtros() {
   const fe = $("#fEstado");
-  fe.innerHTML = Object.entries(EST).map(([k, v]) => `<button class="chip" type="button" aria-pressed="true" data-k="${k}">${v}</button>`).join("");
-  fe.onclick = e => { const b = e.target.closest(".chip"); if (b) { alternar(state.est, b.dataset.k, b); render(); } };
+  fe.hidden = true;
   const ft = $("#fTipo");
-  ft.innerHTML = Object.entries(TIPOS).map(([k, v]) => `<button class="chip" type="button" aria-pressed="true" data-k="${k}" title="${v}"><span class="sw" style="background:var(--t${k})"></span>${k === "P" ? "Sin ordenanza" : v}</button>`).join("");
+  ft.innerHTML = Object.entries(TIPOS).map(([k, v]) => `<button class="chip" type="button" aria-pressed="true" data-k="${k}" title="${v}"><span class="sw" style="background:var(--t${k})"></span>${v}</button>`).join("");
   ft.onclick = e => { const b = e.target.closest(".chip"); if (b) { alternar(state.tipo, b.dataset.k, b); render(); } };
   const fl = $("#fLoc");
   fl.innerHTML = '<option value="">Todas las localidades</option>' + LOCS.map(l => `<option>${l}</option>`).join("");
   fl.onchange = () => { state.loc = fl.value; render(); };
   $("#fQ").oninput = e => { state.q = e.target.value.toLowerCase().trim(); render(); };
-  $("#leyenda").innerHTML = '<summary>Referencias</summary>' + Object.entries(TIPOS).map(([k, v]) => `<div class="l"><span class="sw" style="background:var(--t${k})"></span>${k === "P" ? "Firmado sin ordenanza, en trámite o proyecto" : v}</div>`).join("")
+  $("#leyenda").innerHTML = '<summary>Referencias</summary>' + Object.entries(TIPOS).map(([k, v]) => `<div class="l"><span class="sw" style="background:var(--t${k})"></span>${v}</div>`).join("")
     + '<div class="l"><span class="raya"></span>Ubicación aproximada o inferida</div>'
     + '<div class="l"><span class="raya" style="border-color:var(--zconv);border-top-style:dotted"></span>Zona COU sujeta a convenio</div>'
     + '<div class="l"><span class="sw" style="background:var(--zurb);outline:1px solid var(--zlinea)"></span>Área urbana COU</div>'
