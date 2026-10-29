@@ -24,6 +24,7 @@ const locOf = r => {
 };
 const anioOf = r => r.anio_homologacion || r.anio || null;
 
+const DATA_V = "20261029b";   // cambiar al actualizar los datos
 let REC = [], META = null, sel = null;
 const layerById = {};
 const state = { est: new Set(Object.keys(EST)), tipo: new Set(Object.keys(TIPOS)), loc: "", q: "", ver: new Set(Object.keys(ARBA)) };
@@ -84,7 +85,7 @@ const parcStyle = () => ({ pane: "parc", renderer, color: sat() ? "#ffffff" : cs
 
 let zonasL, parcL, convL, convZL;
 const rotL = L.layerGroup();
-Promise.all(["data/zonas.geojson", "data/convenios.geojson", "data/registros.json", "data/zonas_convenio.geojson", "data/meta.json"].map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); })))
+Promise.all(["data/zonas.geojson", "data/convenios.geojson", "data/registros.json", "data/zonas_convenio.geojson", "data/meta.json"].map(u => fetch(u + "?v=" + DATA_V).then(r => { if (!r.ok) throw new Error(u); return r.json(); })))
   .then(([zon, conv, regs, zc, meta]) => {
     REC = regs.filter(r => r.estado === "homologado"); META = meta;
     zonasL = L.geoJSON(zon, { style: zonaStyle, interactive: false }).addTo(map);
@@ -104,7 +105,7 @@ function parcVisible() { return CAPAS.parc.on && map.getZoom() >= 15; }
 function actualizarParcelario() {
   if (parcVisible() && !parcL) {
     parcL = "cargando";
-    fetch("data/parcelas.geojson").then(r => r.json()).then(g => { parcL = L.geoJSON(g, { style: parcStyle, interactive: false }); actualizarParcelario(); });
+    fetch("data/parcelas.geojson?v=" + DATA_V).then(r => r.json()).then(g => { parcL = L.geoJSON(g, { style: parcStyle, interactive: false }); actualizarParcelario(); });
     return;
   }
   if (parcL && parcL !== "cargando") { if (parcVisible()) parcL.addTo(map); else map.removeLayer(parcL); }
